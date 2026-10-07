@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Witness Remains — Testimony">
+<title>Testimony — The Witness Remains</title>
+
+<style>
+:root{
+  --black:#080808;
+  --paper:#eee7d8;
+  --paper2:#d8cfbd;
+  --gold:#b99a58;
+  --gold2:#d1b675;
+  --muted:#aaa18f;
+  --line:rgba(185,154,88,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--black);
+  color:var(--paper);
+  font-family:Georgia,"Times New Roman",serif;
+  line-height:1.7;
+}
+a{color:var(--gold2);text-decoration:none}
+a:hover{text-decoration:underline}
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(8,8,8,.97);
+  border-bottom:1px solid var(--line);
+  padding:14px 5%;
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  font-family:Arial,sans-serif;
+  font-size:.78rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+nav a{color:#d8cfbd}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:0 5%;
+}
+
+.hero{
+  padding:100px 5% 80px;
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(circle at 80% 20%,rgba(185,154,88,.10),transparent 30%),
+    linear-gradient(180deg,#0d0d0d,#080808);
+}
+
+.kicker{
+  color:var(--gold2);
+  font-family:Arial,sans-serif;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  font-size:.75rem;
+}
+
+h1{
+  font-size:clamp(3rem,9vw,7rem);
+  line-height:.95;
+  margin:18px 0;
+  font-weight:normal;
+}
+
+.subtitle{
+  max-width:780px;
+  font-size:1.25rem;
+  color:var(--paper2);
+}
+
+section{
+  padding:70px 0;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+h2{
+  font-size:2.1rem;
+  font-weight:normal;
+  margin-top:0;
+}
+
+h3{
+  font-size:1.25rem;
+  color:var(--gold2);
+}
+
+.lead{
+  font-size:1.12rem;
+  max-width:850px;
+}
+
+.notice{
+  border-left:3px solid var(--gold);
+  background:#111;
+  padding:24px 28px;
+  margin:30px 0;
+}
+
+.quote{
+  margin:35px 0;
+  padding:30px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  font-size:1.45rem;
+  font-style:italic;
+  color:var(--paper2);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:18px;
+  margin-top:30px;
+}
+
+.card{
+  border:1px solid var(--line);
+  padding:25px;
+  background:linear-gradient(145deg,#121212,#0b0b0b);
+}
+
+.card strong{
+  display:block;
+  color:var(--gold2);
+  margin-bottom:8px;
+  font-family:Arial,sans-serif;
+  font-size:.8rem;
+  letter-spacing:.1em;
+}
+
+.status{
+  display:inline-block;
+  border:1px solid var(--line);
+  padding:5px 10px;
+  margin-top:10px;
+  font-family:Arial,sans-serif;
+  font-size:.7rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--gold2);
+}
+
+.chain{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(145px,1fr));
+  gap:10px;
+  margin-top:30px;
+}
+
+.step{
+  border:1px solid var(--line);
+  padding:18px;
+  text-align:center;
+  font-family:Arial,sans-serif;
+  font-size:.75rem;
+  letter-spacing:.08em;
+}
+
+.small{
+  color:var(--muted);
+  font-size:.88rem;
+}
+
+footer{
+  padding:55px 5%;
+  text-align:center;
+  color:var(--muted);
+  font-size:.9rem;
+}
+
+@media(max-width:650px){
+  nav{gap:10px;padding:12px 4%}
+  .hero{padding:70px 5% 55px}
+  section{padding:50px 0}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="archive.html">Archive</a>
+  <a href="evidence.html">Evidence</a>
+  <a href="government-documents.html">Government</a>
+  <a href="legal.html">Legal</a>
+  <a href="forensics.html">Forensics</a>
+  <a href="timeline.html">Timeline</a>
+  <a href="testimony.html">Testimony</a>
+  <a href="writings.html">Writings</a>
+  <a href="justice.html">Justice</a>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="kicker">The Witness Remains · First-Person Record</div>
+    <h1>TESTIMONY</h1>
+    <p class="subtitle">
+      A place for the author's own account: what was experienced, remembered,
+      recorded, written and preserved — distinguished from independently
+      established fact.
+    </p>
+  </div>
+</header>
+
+<main class="container">
+
+<section>
+  <h2>What Testimony Means Here</h2>
+
+  <p class="lead">
+    Testimony is the first-person record of a person's experience and account
+    of events. It can be deeply important without automatically being the same
+    thing as independently established fact.
+  </p>
+
+  <p>
+    This archive therefore preserves testimony alongside documentary evidence,
+    official records, legal material, correspondence, forensic material and
+    other sources wherever available.
+  </p>
+
+  <div class="notice">
+    <strong>TESTIMONY IS PRESERVED — NOT AUTOMATICALLY ADJUDICATED.</strong>
+    <p>
+      The author's account is presented as the author's account unless an
+      independent source establishes something further. Readers are encouraged
+      to examine the underlying records.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>The Witness</h2>
+
+  <p>
+    Dr Richard William McLean, who writes and publishes as Barran Dodger, has
+    described his life, work, experiences, writings and encounters with
+    institutions through a substantial body of first-person material.
+  </p>
+
+  <p>
+    The Witness Remains brings that testimony into one public documentary
+    framework so that personal accounts can be considered alongside the
+    documentary record rather than existing only as isolated statements.
+  </p>
+
+  <div class="quote">
+    The purpose of preservation is not to force the reader to believe.
+    It is to make the record available for examination.
+  </div>
+</section>
+
+<section>
+  <h2>Layers of Testimony</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <strong>PERSONAL ACCOUNT</strong>
+      <p>
+        The author's direct description of events, experiences, observations
+        or circumstances.
+      </p>
+      <span class="status">Author account</span>
+    </div>
+
+    <div class="card">
+      <strong>CONTEMPORANEOUS RECORD</strong>
+      <p>
+        Messages, emails, notes, recordings or other material created close to
+        the time of an event.
+      </p>
+      <span class="status">Documentary source</span>
+    </div>
+
+    <div class="card">
+      <strong>OFFICIAL RECORD</strong>
+      <p>
+        Material created or issued by a government department, agency, court,
+        tribunal or other institution.
+      </p>
+      <span class="status">Official source</span>
+    </div>
+
+    <div class="card">
+      <strong>CORROBORATION</strong>
+      <p>
+        Independent material that may support part of an account without
+        necessarily establishing every proposition within it.
+      </p>
+      <span class="status">Corroboration</span>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>From Testimony to Evidence</h2>
+
+  <p>
+    Where possible, a testimony-based proposition should be traceable through
+    the documentary chain.
+  </p>
+
+  <div class="chain">
+    <div class="step">ACCOUNT</div>
+    <div class="step">DATE</div>
+    <div class="step">SOURCE</div>
+    <div class="step">DOCUMENT</div>
+    <div class="step">CORROBORATION</div>
+    <div class="step">RESPONSE</div>
+    <div class="step">STATUS</div>
+  </div>
+
+  <p class="small">
+    The absence of corroboration is not itself proof that an account is false.
+    Equally, the existence of a document does not automatically prove every
+    interpretation placed upon it.
+  </p>
+</section>
+
+<section>
+  <h2>Testimony Categories</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <strong>MESSAGES</strong>
+      <p>
+        Written communications and other preserved message records.
+      </p>
+      <a href="archive.html">View Archive Catalogue →</a>
+    </div>
+
+    <div class="card">
+      <strong>CALLS & RECORDINGS</strong>
+      <p>
+        Material relating to recorded or documented communications where
+        preserved and available.
+      </p>
+      <a href="archive.html">View Archive Catalogue →</a>
+    </div>
+
+    <div class="card">
+      <strong>STATEMENTS</strong>
+      <p>
+        First-person statements, declarations and narrative accounts.
+      </p>
+      <a href="archive.html">View Archive Catalogue →</a>
+    </div>
+
+    <div class="card">
+      <strong>CHRONOLOGY</strong>
+      <p>
+        Events placed into chronological context and connected to sources
+        where available.
+      </p>
+      <a href="timeline.html">Open Timeline →</a>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Evidence Classification</h2>
+
+  <p>
+    The archive uses a distinction between what is documented, what is claimed,
+    what is alleged and what remains interpretive.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <strong>A — DOCUMENTED FACT</strong>
+      <p>
+        A proposition directly supported by an identifiable record.
+      </p>
+    </div>
+
+    <div class="card">
+      <strong>B — CORROBORATED CLAIM</strong>
+      <p>
+        A claim supported by additional identifiable material.
+      </p>
+    </div>
+
+    <div class="card">
+      <strong>C — DOCUMENTED ALLEGATION</strong>
+      <p>
+        An allegation recorded in documentary material but not established as
+        fact by the archive.
+      </p>
+    </div>
+
+    <div class="card">
+      <strong>D — INFERENCE / INTERPRETATION</strong>
+      <p>
+        A conclusion or interpretation drawn from available material.
+      </p>
+    </div>
+
+    <div class="card">
+      <strong>E — SPECULATION</strong>
+      <p>
+        A possibility or proposition for which sufficient evidence has not been
+        established.
+      </p>
+    </div>
+
+    <div class="card">
+      <strong>UNRESOLVED</strong>
+      <p>
+        The available record does not permit a reliable conclusion.
+      </p>
+    </div>
+
+  </div>
+
+  <p>
+    <a href="evidence.html">Read the full Evidence methodology →</a>
+  </p>
+</section>
+
+<section>
+  <h2>Faith and Testimony</h2>
+
+  <p>
+    Some testimony within this archive is explicitly spiritual. References to
+    God, the Most High, calling, purpose, providence, survival or anointing
+    belong to the author's faith and spiritual interpretation unless supported
+    by an independently verifiable documentary proposition.
+  </p>
+
+  <p>
+    The archive does not present a theological belief as an independently
+    established factual finding. It preserves the belief because it forms part
+    of the author's testimony and body of writing.
+  </p>
+
+  <div class="quote">
+    They could not erase what God preserved.
+  </div>
+
+  <p class="small">
+    This statement is preserved as an expression of the author's faith and
+    interpretation.
+  </p>
+</section>
+
+<section>
+  <h2>Read the Underlying Record</h2>
+
+  <p>
+    Testimony should be read together with the source documents wherever those
+    documents are available.
+  </p>
+
+  <p>
+    <a href="https://wezzo72.github.io/Barrandodger/" target="_blank"
+       rel="noopener noreferrer">
+      Main Archive — The Witness Remains
+    </a>
+  </p>
+
+  <p>
+    <a href="https://wezzo72.github.io/barrandodger-rebuild/" target="_blank"
+       rel="noopener noreferrer">
+      Rebuild Archive — Finding Aid
+    </a>
+  </p>
+
+  <p>
+    <a href="https://github.com/drbarrandodger" target="_blank"
+       rel="noopener noreferrer">
+      GitHub — Dr Barran Dodger
+    </a>
+  </p>
+
+  <p>
+    <a href="https://github.com/wezzo72" target="_blank"
+       rel="noopener noreferrer">
+      GitHub — Wezzo72
+    </a>
+  </p>
+</section>
+
+<section>
+  <h2>The Boundary</h2>
+
+  <div class="notice">
+    <strong>NOT A COURT. NOT A VERDICT.</strong>
+    <p>
+      This testimony archive does not determine criminal guilt, establish
+      legal liability, replace legal advice or independently establish every
+      allegation contained within the material.
+    </p>
+    <p>
+      Its purpose is preservation, transparency, contextualisation and
+      examination.
+    </p>
+  </div>
+
+  <p class="lead">
+    A witness can preserve a record. A reader can examine it. An independent
+    investigator can test it. A court can determine matters within its
+    jurisdiction. These functions should not be confused.
+  </p>
+</section>
+
+</main>
+
+<footer>
+  <p><strong>THE WITNESS REMAINS — DR BARRAN DODGER</strong></p>
+  <p>A life preserved in testimony.</p>
+  <p>PRESERVE FIRST · EXAMINE SECOND · CONCLUDE LAST</p>
+</footer>
+
+</body>
+</html>
