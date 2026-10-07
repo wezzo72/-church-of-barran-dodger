@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Witness Remains — Therapy Dog Record">
+<title>Therapy Dog Record — The Witness Remains</title>
+
+<style>
+:root{
+  --black:#080808;
+  --paper:#eee7d8;
+  --paper2:#d8cfbd;
+  --gold:#b99a58;
+  --gold2:#d1b675;
+  --muted:#aaa18f;
+  --line:rgba(185,154,88,.35);
+  --panel:#111;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--black);
+  color:var(--paper);
+  font-family:Georgia,"Times New Roman",serif;
+  line-height:1.7;
+}
+a{color:var(--gold2);text-decoration:none}
+a:hover{text-decoration:underline}
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(8,8,8,.97);
+  border-bottom:1px solid var(--line);
+  padding:13px 4%;
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  font-family:Arial,sans-serif;
+  font-size:.72rem;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+}
+nav a{color:var(--paper2)}
+
+.container{
+  max-width:1150px;
+  margin:auto;
+  padding:0 5%;
+}
+
+.hero{
+  padding:100px 5% 75px;
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(circle at 80% 20%,rgba(185,154,88,.12),transparent 30%),
+    linear-gradient(180deg,#0d0d0d,#080808);
+}
+
+.kicker{
+  color:var(--gold2);
+  font-family:Arial,sans-serif;
+  font-size:.73rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+}
+
+h1{
+  font-size:clamp(3rem,8vw,7rem);
+  line-height:.9;
+  font-weight:normal;
+  margin:18px 0;
+}
+
+.subtitle{
+  max-width:900px;
+  font-size:1.2rem;
+  color:var(--paper2);
+}
+
+section{
+  padding:65px 0;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+h2{
+  font-size:2.1rem;
+  line-height:1.15;
+  font-weight:normal;
+}
+
+h3{
+  color:var(--gold2);
+  font-weight:normal;
+}
+
+.notice{
+  background:var(--panel);
+  border-left:3px solid var(--gold);
+  padding:25px 28px;
+  margin:30px 0;
+}
+
+.notice strong{
+  color:var(--gold2);
+  font-family:Arial,sans-serif;
+  letter-spacing:.08em;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:18px;
+  margin:30px 0;
+}
+
+.card{
+  background:#0e0e0e;
+  border:1px solid var(--line);
+  padding:24px;
+}
+
+.label{
+  color:var(--gold2);
+  font-family:Arial,sans-serif;
+  font-size:.69rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+
+.record{
+  background:#0d0d0d;
+  border:1px solid var(--line);
+  margin:22px 0;
+  padding:26px;
+}
+
+.record-head{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  flex-wrap:wrap;
+  border-bottom:1px solid rgba(185,154,88,.2);
+  padding-bottom:15px;
+  margin-bottom:18px;
+}
+
+.status{
+  color:var(--gold2);
+  font-family:Arial,sans-serif;
+  font-size:.68rem;
+  letter-spacing:.07em;
+}
+
+.chain{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:30px 0;
+}
+
+.chain span{
+  border:1px solid var(--line);
+  padding:12px 15px;
+  background:#101010;
+  color:var(--paper2);
+}
+
+.quote{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:32px 20px;
+  margin:35px 0;
+  text-align:center;
+  font-size:1.4rem;
+  font-style:italic;
+  color:var(--paper2);
+}
+
+.small{
+  color:var(--muted);
+  font-size:.86rem;
+}
+
+footer{
+  text-align:center;
+  padding:60px 5%;
+  color:var(--muted);
+}
+
+@media(max-width:650px){
+  nav{gap:9px;padding:11px 4%}
+  .hero{padding:70px 5% 55px}
+  section{padding:48px 0}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="archive.html">Archive</a>
+  <a href="opening-statement.html">Opening</a>
+  <a href="evidence.html">Evidence</a>
+  <a href="government-documents.html">Government</a>
+  <a href="legal.html">Legal</a>
+  <a href="forensics.html">Forensics</a>
+  <a href="timeline.html">Timeline</a>
+  <a href="testimony.html">Testimony</a>
+  <a href="messages.html">Messages</a>
+  <a href="calls.html">Calls</a>
+  <a href="able-point.html">Able Point</a>
+  <a href="therapy-dog.html">Therapy Dog</a>
+  <a href="justice-mandate.html">Justice</a>
+  <a href="writings.html">Writings</a>
+  <a href="gospels.html">Gospels</a>
+  <a href="prophecy.html">Prophecy</a>
+  <a href="hope.html">Hope</a>
+</nav>
+
+<header class="hero">
+  <div class="container">
+
+    <div class="kicker">
+      The Witness Remains · Support & Human Dignity Record
+    </div>
+
+    <h1>THERAPY<br>DOG</h1>
+
+    <p class="subtitle">
+      A documentary record concerning the author's therapy/support animal,
+      the role described for the animal, and the associated record dated
+      29 September 2026.
+    </p>
+
+  </div>
+</header>
+
+<main class="container">
+
+<section>
+
+  <h2>Purpose of This Record</h2>
+
+  <p>
+    This page preserves and identifies documentary material concerning the
+    author's therapy/support dog and the role that animal is described as
+    having in the author's life and support environment.
+  </p>
+
+  <p>
+    The principal date identified for this record is
+    <strong>29 September 2026</strong>.
+  </p>
+
+  <div class="notice">
+
+    <strong>DOCUMENTARY RECORD · AUTHOR ACCOUNT · STATUS TO BE VERIFIED</strong>
+
+    <p>
+      This page does not independently certify the legal, medical, clinical
+      or administrative status of the animal. Those matters should be
+      determined from the underlying documents and, where applicable, the
+      relevant authorised body.
+    </p>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2>The 29 September 2026 Record</h2>
+
+  <div class="record">
+
+    <div class="record-head">
+      <span class="label">PRIMARY RECORD</span>
+      <span class="status">DATE IDENTIFIED · 29 SEP 2026</span>
+    </div>
+
+    <h3>Therapy / Support Dog Document</h3>
+
+    <p>
+      Date: <strong>29 September 2026</strong>
+    </p>
+
+    <p>
+      Subject: Documentation concerning the author's therapy/support dog.
+    </p>
+
+    <p>
+      Original document: To be linked to the primary archive when its exact
+      public path and filename have been verified.
+    </p>
+
+    <p class="small">
+      SOURCE STATUS: SOURCE NOT YET VERIFIED ON THIS FINDING-AID PAGE.
+    </p>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2>The Animal's Role</h2>
+
+  <p>
+    The author's account describes the dog as a therapy/support animal and
+    as an important source of companionship, emotional support, continuity
+    and dignity.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="label">SUPPORT</div>
+      <h3>Companionship</h3>
+      <p>
+        The presence of an animal can form part of a person's everyday
+        support environment and sense of connection.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="label">DIGNITY</div>
+      <h3>Continuity</h3>
+      <p>
+        The animal may form part of the continuity of a person's home and
+        daily life.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="label">TESTIMONY</div>
+      <h3>Witness to Life</h3>
+      <p>
+        The author describes the animal as part of the lived history preserved
+        in this archive.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="label">RECORD</div>
+      <h3>Documentary Relevance</h3>
+      <p>
+        Where the animal's presence or welfare is relevant to an event,
+        communication or decision, the underlying record should be preserved.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2>Why the Record Matters</h2>
+
+  <p>
+    A documentary archive should preserve not only institutional decisions
+    and formal correspondence, but also the human circumstances in which
+    those decisions occurred.
+  </p>
+
+  <p>
+    The therapy/support dog record therefore sits within the broader human
+    story of accommodation, support, dignity, survival and continuity.
+  </p>
+
+  <div class="quote">
+    A RECORD OF A LIFE SHOULD PRESERVE THE HUMAN BEING WITHIN THE RECORD.
+  </div>
+
+</section>
+
+<section>
+
+  <h2>Documentary Questions</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>What document exists?</h3>
+      <p>
+        Identify the original document dated 29 September 2026.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Who authored it?</h3>
+      <p>
+        Establish the author, issuer or professional source from the document.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>What does it say?</h3>
+      <p>
+        Preserve the document's actual wording rather than relying solely on
+        later summaries.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>What was its purpose?</h3>
+      <p>
+        Establish why the document was created and what decision or situation
+        it related to.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Who received it?</h3>
+      <p>
+        Where documented, identify the recipient and subsequent use of the
+        record.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>What happened afterwards?</h3>
+      <p>
+        Link the record to later communications, decisions or events where
+        appropriate.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2>Evidence Classification</h2>
+
+  <div class="chain">
+    <span>A · DOCUMENTED FACT</span>
+    <span>B · CORROBORATED CLAIM</span>
+    <span>C · DOCUMENTED ALLEGATION</span>
+    <span>D · INFERENCE</span>
+    <span>E · SPECULATION</span>
+  </div>
+
+  <p>
+    The existence of a document may establish that the document exists.
+    It does not automatically establish the truth of every proposition
+    contained within it.
+  </p>
+
+  <p>
+    Clinical, legal, administrative or other conclusions should be attributed
+    to the relevant source and not silently converted into independent
+    findings by this archive.
+  </p>
+
+</section>
+
+<section>
+
+  <h2>Preservation and Provenance</h2>
+
+  <p>
+    The preferred documentary chain is:
+  </p>
+
+  <div class="chain">
+    <span>ORIGINAL DOCUMENT</span>
+    <span>FILENAME</span>
+    <span>DATE</span>
+    <span>SOURCE</span>
+    <span>HASH</span>
+    <span>REPOSITORY</span>
+    <span>COMMIT</span>
+    <span>PUBLIC ARCHIVE</span>
+  </div>
+
+  <p>
+    Where SHA-256, Git history, OpenTimestamps or blockchain records are
+    available, they may assist with preservation and integrity.
+  </p>
+
+  <p>
+    Such technical records can help establish that a digital file has been
+    preserved or that a particular digital object has not changed. They do
+    not, by themselves, establish the truth of the underlying claims.
+  </p>
+
+</section>
+
+<section>
+
+  <h2>Privacy and Dignity</h2>
+
+  <p>
+    Records concerning support arrangements and animals may contain personal
+    information about the author, other individuals or service providers.
+  </p>
+
+  <p>
+    Publication should therefore distinguish legitimate public-interest
+    documentation from unnecessary disclosure of private information.
+  </p>
+
+  <p>
+    Where appropriate, sensitive material should be redacted while preserving
+    enough information for researchers to understand provenance and context.
+  </p>
+
+</section>
+
+<section>
+
+  <h2>Related Records</h2>
+
+  <p><a href="able-point.html">Able Point Record →</a></p>
+
+  <p><a href="testimony.html">Testimony →</a></p>
+
+  <p><a href="messages.html">Messages →</a></p>
+
+  <p><a href="calls.html">Calls & Recordings →</a></p>
+
+  <p><a href="timeline.html">Timeline →</a></p>
+
+  <p><a href="evidence.html">Evidence & Preservation →</a></p>
+
+  <p><a href="justice-mandate.html">Justice Mandate →</a></p>
+
+  <p><a href="archive.html">Complete Archive Catalogue →</a></p>
+
+</section>
+
+<section>
+
+  <h2>Primary Archives</h2>
+
+  <p>
+    <a href="https://wezzo72.github.io/Barrandodger/"
+       target="_blank"
+       rel="noopener noreferrer">
+       Main Archive — The Witness Remains
+    </a>
+  </p>
+
+  <p>
+    <a href="https://wezzo72.github.io/barrandodger-rebuild/"
+       target="_blank"
+       rel="noopener noreferrer">
+       Rebuild Archive — Finding Aid
+    </a>
+  </p>
+
+</section>
+
+<section>
+
+  <h2>The Boundary</h2>
+
+  <div class="notice">
+
+    <strong>NOT A COURT · NOT A MEDICAL DETERMINATION · NOT A VERDICT</strong>
+
+    <p>
+      This page preserves and organises documentary material concerning the
+      author's therapy/support dog.
+    </p>
+
+    <p>
+      It does not independently determine the animal's legal status, clinical
+      status, eligibility status, or the conduct or liability of any person or
+      organisation.
+    </p>
+
+    <p>
+      Any disputed matter remains disputed or unresolved unless supported by
+      an appropriate authoritative determination.
+    </p>
+
+  </div>
+
+  <div class="quote">
+    PRESERVE FIRST · EXAMINE SECOND · CONCLUDE LAST
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  <p><strong>THE WITNESS REMAINS — DR BARRAN DODGER</strong></p>
+  <p>THERAPY DOG · DOCUMENTARY RECORD</p>
+  <p>TRUTH · PRESERVATION · JUSTICE · DIGNITY · COURAGE · LOVE · HOPE</p>
+</footer>
+
+</body>
+</html>
