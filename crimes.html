@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Witness Remains — Crimes occurring to Barran Dodger: documentary finding aid">
+<title>Crimes 1–150 — The Witness Remains</title>
+
+<style>
+:root{
+  --black:#080808;
+  --paper:#eee7d8;
+  --paper2:#d8cfbd;
+  --gold:#b99a58;
+  --gold2:#d1b675;
+  --muted:#aaa18f;
+  --line:rgba(185,154,88,.35);
+  --panel:#111;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--black);
+  color:var(--paper);
+  font-family:Georgia,"Times New Roman",serif;
+  line-height:1.65;
+}
+a{color:var(--gold2);text-decoration:none}
+a:hover{text-decoration:underline}
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(8,8,8,.97);
+  border-bottom:1px solid var(--line);
+  padding:13px 4%;
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  font-family:Arial,sans-serif;
+  font-size:.73rem;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+}
+nav a{color:var(--paper2)}
+
+.container{
+  max-width:1180px;
+  margin:auto;
+  padding:0 5%;
+}
+
+.hero{
+  padding:100px 5% 75px;
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(circle at 80% 20%,rgba(185,154,88,.12),transparent 30%),
+    linear-gradient(180deg,#0d0d0d,#080808);
+}
+
+.kicker{
+  color:var(--gold2);
+  font-family:Arial,sans-serif;
+  font-size:.74rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+}
+
+h1{
+  font-size:clamp(2.8rem,8vw,6.8rem);
+  line-height:.92;
+  font-weight:normal;
+  margin:18px 0;
+}
+
+.subtitle{
+  max-width:900px;
+  font-size:1.2rem;
+  color:var(--paper2);
+}
+
+section{
+  padding:65px 0;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+h2{
+  font-size:2.1rem;
+  font-weight:normal;
+  line-height:1.15;
+}
+
+h3{
+  color:var(--gold2);
+}
+
+.notice{
+  background:var(--panel);
+  border-left:3px solid var(--gold);
+  padding:25px 28px;
+  margin:30px 0;
+}
+
+.notice strong{
+  color:var(--gold2);
+  font-family:Arial,sans-serif;
+  letter-spacing:.08em;
+}
+
+.classifications{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:15px;
+  margin:28px 0;
+}
+
+.classification{
+  border:1px solid var(--line);
+  padding:20px;
+  background:#0e0e0e;
+}
+
+.classification strong{
+  color:var(--gold2);
+  font-family:Arial,sans-serif;
+  font-size:.75rem;
+  letter-spacing:.08em;
+}
+
+.searchbox{
+  margin:25px 0;
+}
+
+input{
+  width:100%;
+  padding:16px 18px;
+  background:#111;
+  color:var(--paper);
+  border:1px solid var(--line);
+  font-family:Georgia,serif;
+  font-size:1rem;
+  outline:none;
+}
+
+input:focus{
+  border-color:var(--gold2);
+}
+
+.table-wrap{
+  overflow-x:auto;
+  border:1px solid var(--line);
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:900px;
+}
+
+th{
+  background:#151515;
+  color:var(--gold2);
+  text-align:left;
+  font-family:Arial,sans-serif;
+  font-size:.72rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+th,td{
+  padding:15px 14px;
+  border-bottom:1px solid rgba(185,154,88,.18);
+  vertical-align:top;
+}
+
+td{
+  color:var(--paper2);
+  font-size:.93rem;
+}
+
+.number{
+  color:var(--gold);
+  font-family:Arial,sans-serif;
+  font-weight:bold;
+}
+
+.status{
+  color:var(--gold2);
+  font-family:Arial,sans-serif;
+  font-size:.72rem;
+  letter-spacing:.05em;
+}
+
+.empty{
+  color:var(--muted);
+  font-style:italic;
+}
+
+.quote{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:32px 20px;
+  margin:35px 0;
+  text-align:center;
+  font-size:1.45rem;
+  font-style:italic;
+  color:var(--paper2);
+}
+
+.small{
+  color:var(--muted);
+  font-size:.86rem;
+}
+
+footer{
+  text-align:center;
+  padding:60px 5%;
+  color:var(--muted);
+}
+
+@media(max-width:650px){
+  nav{gap:9px;padding:11px 4%}
+  .hero{padding:70px 5% 55px}
+  section{padding:48px 0}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="archive.html">Archive</a>
+  <a href="opening-statement.html">Opening</a>
+  <a href="justice-mandate.html">Justice</a>
+  <a href="crimes.html">Crimes 1–150</a>
+  <a href="evidence.html">Evidence</a>
+  <a href="government-documents.html">Government</a>
+  <a href="legal.html">Legal</a>
+  <a href="forensics.html">Forensics</a>
+  <a href="timeline.html">Timeline</a>
+  <a href="testimony.html">Testimony</a>
+  <a href="writings.html">Writings</a>
+  <a href="gospels.html">Gospels</a>
+  <a href="prophecy.html">Prophecy</a>
+  <a href="hope.html">Hope</a>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="kicker">The Witness Remains · Documentary Finding Aid</div>
+
+    <h1>CRIMES<br>1–150</h1>
+
+    <p class="subtitle">
+      Crimes occurring to Barran Dodger — a structured finding aid for
+      allegations, claims, documentary records, responses and unresolved
+      questions contained within the wider archive.
+    </p>
+  </div>
+</header>
+
+<main class="container">
+
+<section>
+
+  <h2>Purpose of This Register</h2>
+
+  <p>
+    This page is intended to provide a structured index for matters that the
+    author describes as crimes or potentially criminal conduct.
+  </p>
+
+  <p>
+    The word “crimes” in this page title reflects the author's description and
+    does not itself constitute a legal finding that a crime occurred.
+  </p>
+
+  <div class="notice">
+
+    <strong>IMPORTANT STATUS NOTICE</strong>
+
+    <p>
+      An entry in this register is not, by itself, proof that a crime occurred.
+      Each matter must be assessed against its underlying evidence, applicable
+      law, jurisdiction and evidentiary standard.
+    </p>
+
+    <p>
+      Where no competent authority has established criminal guilt, the matter
+      should remain identified as an allegation, claim, inference or unresolved
+      issue as appropriate.
+    </p>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2>How to Read the Register</h2>
+
+  <div class="classifications">
+
+    <div class="classification">
+      <strong>A — DOCUMENTED FACT</strong>
+      <p>
+        Directly supported by an identifiable record.
+      </p>
+    </div>
+
+    <div class="classification">
+      <strong>B — CORROBORATED CLAIM</strong>
+      <p>
+        Supported by additional identifiable material.
+      </p>
+    </div>
+
+    <div class="classification">
+      <strong>C — DOCUMENTED ALLEGATION</strong>
+      <p>
+        An allegation preserved in a record but not thereby established as true.
+      </p>
+    </div>
+
+    <div class="classification">
+      <strong>D — INFERENCE</strong>
+      <p>
+        An interpretation drawn from available information.
+      </p>
+    </div>
+
+    <div class="classification">
+      <strong>E — SPECULATION</strong>
+      <p>
+        A proposition not sufficiently established by available evidence.
+      </p>
+    </div>
+
+    <div class="classification">
+      <strong>UNRESOLVED</strong>
+      <p>
+        The available material does not presently establish a reliable
+        conclusion.
+      </p>
+    </div>
+
+  </div>
+
+  <p class="small">
+    A classification describes the evidentiary status of the material, not a
+    finding of criminal guilt.
+  </p>
+
+</section>
+
+<section>
+
+  <h2>Search the 150-Entry Register</h2>
+
+  <p>
+    Use the search field to filter the register by number, description,
+    classification or status.
+  </p>
+
+  <div class="searchbox">
+    <input
+      id="search"
+      type="search"
+      placeholder="Search entries…"
+      aria-label="Search crimes register"
+      oninput="filterTable()">
+  </div>
+
+  <div class="table-wrap">
+
+    <table id="crimeTable">
+
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Matter</th>
+          <th>Date</th>
+          <th>Source / Document</th>
+          <th>Classification</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+<script>
+const entries = Array.from({length:150}, (_,i) => ({
+  number:i+1,
+  matter:"SOURCE NOT YET VERIFIED — ENTRY TO BE POPULATED FROM PRIMARY ARCHIVE",
+  date:"—",
+  source:"—",
+  classification:"UNRESOLVED",
+  status:"TO BE VERIFIED"
+}));
+
+document.write(entries.map(e => `
+<tr>
+  <td class="number">${e.number}</td>
+  <td class="empty">${e.matter}</td>
+  <td>${e.date}</td>
+  <td>${e.source}</td>
+  <td class="status">${e.classification}</td>
+  <td class="status">${e.status}</td>
+</tr>
+`).join(""));
+</script>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+  <p class="small">
+    The 150 numbered positions are deliberately preserved as an index
+    structure. No allegation has been invented to fill an empty position.
+  </p>
+
+</section>
+
+<section>
+
+  <h2>Documentary Standard</h2>
+
+  <p>
+    Before an entry is populated, the preferred documentary chain is:
+  </p>
+
+  <div class="classifications">
+
+    <div class="classification">
+      <strong>1 · MATTER</strong>
+      <p>What is alleged to have occurred?</p>
+    </div>
+
+    <div class="classification">
+      <strong>2 · DATE</strong>
+      <p>When is the event said to have occurred?</p>
+    </div>
+
+    <div class="classification">
+      <strong>3 · SOURCE</strong>
+      <p>What is the original source?</p>
+    </div>
+
+    <div class="classification">
+      <strong>4 · DOCUMENT</strong>
+      <p>What identifiable record exists?</p>
+    </div>
+
+    <div class="classification">
+      <strong>5 · RESPONSE</strong>
+      <p>What response was received?</p>
+    </div>
+
+    <div class="classification">
+      <strong>6 · OUTCOME</strong>
+      <p>Was there a determination or other outcome?</p>
+    </div>
+
+    <div class="classification">
+      <strong>7 · STATUS</strong>
+      <p>What can presently be established?</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2>What Counts as a Primary Record?</h2>
+
+  <p>
+    Depending upon the matter, primary material may include correspondence,
+    official records, legal documents, administrative records, complaints,
+    responses, recordings, messages, contemporaneous notes, published material,
+    forensic material or other identifiable source documents.
+  </p>
+
+  <p>
+    The preferred practice is to link directly to the original public source
+    wherever possible.
+  </p>
+
+  <p>
+    A summary or AI-generated description should never silently replace the
+    underlying document.
+  </p>
+
+</section>
+
+<section>
+
+  <h2>Responses and Counter-Evidence</h2>
+
+  <p>
+    A credible finding aid should preserve not only material supporting an
+    allegation but also material that contradicts, disputes or qualifies it.
+  </p>
+
+  <p>
+    Where a person, organisation or institution has provided a response, the
+    response should be identified and preserved where lawful.
+  </p>
+
+  <div class="notice">
+
+    <strong>NO SILENT CONVERSION</strong>
+
+    <p>
+      An allegation does not become a fact merely because it is repeated.
+      Repetition is not independent corroboration.
+    </p>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2>Criminality Requires Legal Determination</h2>
+
+  <p>
+    Whether conduct constitutes a criminal offence depends upon the applicable
+    law, the elements of the offence, evidence, jurisdiction, procedure and the
+    relevant standard of proof.
+  </p>
+
+  <p>
+    This archive cannot make that determination on behalf of a court or other
+    competent authority.
+  </p>
+
+  <p>
+    Accordingly, this page should be understood as an index of matters raised
+    by the author and/or documented in the underlying archive, pending
+    examination of the primary material.
+  </p>
+
+  <div class="quote">
+    PRESERVE THE ALLEGATION.<br>
+    PRESERVE THE RESPONSE.<br>
+    PRESERVE THE EVIDENCE.<br>
+    DO NOT MANUFACTURE THE VERDICT.
+  </div>
+
+</section>
+
+<section>
+
+  <h2>Related Archive Sections</h2>
+
+  <p>
+    <a href="evidence.html">Evidence & Preservation →</a>
+  </p>
+
+  <p>
+    <a href="government-documents.html">
+      Official Government Documents →
+    </a>
+  </p>
+
+  <p>
+    <a href="legal.html">
+      Legal & Administrative Records →
+    </a>
+  </p>
+
+  <p>
+    <a href="forensics.html">
+      Forensic Record →
+    </a>
+  </p>
+
+  <p>
+    <a href="timeline.html">
+      Timeline →
+    </a>
+  </p>
+
+  <p>
+    <a href="testimony.html">
+      Testimony →
+    </a>
+  </p>
+
+  <p>
+    <a href="archive.html">
+      Complete Archive Catalogue →
+    </a>
+  </p>
+
+</section>
+
+<section>
+
+  <h2>Primary Archives</h2>
+
+  <p>
+    <a
+      href="https://wezzo72.github.io/Barrandodger/"
+      target="_blank"
+      rel="noopener noreferrer">
+      Main Archive — The Witness Remains
+    </a>
+  </p>
+
+  <p>
+    <a
+      href="https://wezzo72.github.io/barrandodger-rebuild/"
+      target="_blank"
+      rel="noopener noreferrer">
+      Rebuild Archive — Finding Aid
+    </a>
+  </p>
+
+</section>
+
+<section>
+
+  <h2>The Boundary</h2>
+
+  <div class="notice">
+
+    <strong>NOT A COURT · NOT A VERDICT</strong>
+
+    <p>
+      The Witness Remains is a documentary archive and first-person research
+      project.
+    </p>
+
+    <p>
+      This register does not establish that any person committed a crime.
+      It does not determine criminal guilt, legal liability or human-rights
+      violations.
+    </p>
+
+    <p>
+      Allegations remain allegations unless established by an appropriately
+      authorised process or supported to the relevant evidentiary standard.
+    </p>
+
+    <p>
+      Where the evidence is insufficient, the correct status is unresolved.
+    </p>
+
+  </div>
+
+  <p class="quote">
+    PRESERVE FIRST · EXAMINE SECOND · CONCLUDE LAST
+  </p>
+
+</section>
+
+</main>
+
+<footer>
+  <p><strong>THE WITNESS REMAINS — DR BARRAN DODGER</strong></p>
+  <p>CRIMES 1–150 · DOCUMENTARY FINDING AID</p>
+  <p>TRUTH · PRESERVATION · JUSTICE · DIGNITY · COURAGE · LOVE · HOPE</p>
+</footer>
+
+<script>
+function filterTable(){
+  const query=document.getElementById("search").value.toLowerCase();
+  const rows=document.querySelectorAll("#crimeTable tbody tr");
+
+  rows.forEach(row=>{
+    row.style.display=row.innerText.toLowerCase().includes(query)
+      ? ""
+      : "none";
+  });
+}
+</script>
+
+</body>
+</html>
