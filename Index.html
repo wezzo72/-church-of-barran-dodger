@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Witness Remains — The Church of Barran Dodger. A public documentary archive of testimony, writing, evidence, preservation, justice and hope.">
+<title>The Witness Remains — The Church of Barran Dodger</title>
+
+<style>
+:root{
+  --black:#090909;
+  --dark:#111;
+  --panel:#171512;
+  --paper:#e8dfcc;
+  --muted:#aaa18f;
+  --gold:#c5a45b;
+  --line:#39342b;
+  --white:#f5f1e8;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--black);
+  color:var(--paper);
+  font-family:Georgia,"Times New Roman",serif;
+  line-height:1.65;
+}
+a{color:var(--gold);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1150px;margin:auto;padding:0 22px}
+header{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(9,9,9,.96);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(8px);
+}
+.nav{
+  min-height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+}
+.logo{
+  font-family:Arial,sans-serif;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:2px;
+  color:var(--white);
+}
+nav{
+  display:flex;
+  gap:15px;
+  overflow-x:auto;
+  white-space:nowrap;
+  scrollbar-width:none;
+}
+nav::-webkit-scrollbar{display:none}
+nav a{
+  font-family:Arial,sans-serif;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:var(--muted);
+}
+nav a:hover{color:var(--gold)}
+.hero{
+  min-height:88vh;
+  display:flex;
+  align-items:center;
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(circle at 80% 20%,rgba(197,164,91,.10),transparent 35%),
+    linear-gradient(180deg,#0b0b0a,#11100d);
+}
+.kicker{
+  font-family:Arial,sans-serif;
+  font-size:12px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--gold);
+}
+h1{
+  font-size:clamp(48px,10vw,105px);
+  line-height:.92;
+  margin:20px 0;
+  max-width:950px;
+  font-weight:400;
+}
+.hero p{
+  max-width:750px;
+  font-size:clamp(18px,3vw,25px);
+  color:#c8c0ae;
+}
+.buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{
+  display:inline-block;
+  padding:13px 19px;
+  border:1px solid var(--gold);
+  color:var(--paper);
+  font-family:Arial,sans-serif;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+.btn.primary{background:var(--gold);color:#111}
+section{padding:90px 0;border-bottom:1px solid var(--line)}
+.section-title{
+  font-size:clamp(32px,6vw,60px);
+  font-weight:400;
+  line-height:1;
+  margin:0 0 20px;
+}
+.intro{max-width:780px;color:#c3bbab;font-size:18px}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:16px;
+  margin-top:35px;
+}
+.card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  padding:25px;
+  min-height:180px;
+}
+.card h3{margin-top:0;font-size:22px;font-weight:400}
+.card p{color:var(--muted)}
+.label{
+  font-family:Arial,sans-serif;
+  font-size:10px;
+  letter-spacing:2px;
+  color:var(--gold);
+  text-transform:uppercase;
+}
+.quote{
+  margin:40px 0;
+  padding:35px;
+  border-left:3px solid var(--gold);
+  background:#12110f;
+  font-size:25px;
+  font-style:italic;
+}
+.values{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:30px;
+}
+.value{
+  border:1px solid var(--line);
+  padding:10px 14px;
+  font-family:Arial,sans-serif;
+  font-size:11px;
+  letter-spacing:1.5px;
+}
+.chain{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  margin:35px 0;
+}
+.chain span{
+  border:1px solid var(--gold);
+  padding:12px 14px;
+  font-family:Arial,sans-serif;
+  font-size:11px;
+  letter-spacing:1px;
+}
+.search{
+  width:100%;
+  margin:25px 0;
+  padding:16px;
+  background:#0e0e0d;
+  border:1px solid var(--line);
+  color:var(--paper);
+  font-size:16px;
+}
+.timeline{
+  border-left:1px solid var(--gold);
+  margin:35px 0 0 8px;
+}
+.event{
+  padding:0 0 30px 28px;
+  position:relative;
+}
+.event:before{
+  content:"";
+  position:absolute;
+  left:-6px;
+  top:8px;
+  width:11px;
+  height:11px;
+  background:var(--gold);
+  border-radius:50%;
+}
+.year{
+  color:var(--gold);
+  font-family:Arial,sans-serif;
+  font-size:12px;
+  letter-spacing:2px;
+}
+.notice{
+  border:1px solid var(--gold);
+  padding:25px;
+  background:#14120d;
+}
+footer{
+  padding:60px 0;
+  color:var(--muted);
+  font-size:14px;
+}
+.small{
+  font-family:Arial,sans-serif;
+  font-size:11px;
+  color:#817a6d;
+}
+@media(max-width:700px){
+  header{position:relative}
+  .nav{display:block;padding:15px 0}
+  .logo{margin-bottom:12px}
+  nav{padding-bottom:4px}
+  .hero{min-height:75vh}
+  section{padding:65px 0}
+  .quote{font-size:20px;padding:25px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+<div class="logo">THE WITNESS REMAINS</div>
+<nav>
+<a href="#witness">Witness</a>
+<a href="#archive">Archive</a>
+<a href="#evidence">Evidence</a>
+<a href="#gospels">Gospels</a>
+<a href="#prophecy">Prophecy</a>
+<a href="#books">Books</a>
+<a href="#justice">Justice</a>
+<a href="#about">About</a>
+</nav>
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+<div class="container">
+<div class="kicker">The Church of Barran Dodger</div>
+
+<h1>THE WITNESS<br>REMAINS.</h1>
+
+<p>
+A life preserved in testimony. A body of writing. An archive of records.
+A search for truth, justice, dignity, accountability and hope.
+</p>
+
+<div class="buttons">
+<a class="btn primary" href="#archive">Enter the Archive</a>
+<a class="btn" href="#witness">Read the Witness</a>
+</div>
+
+<div class="values">
+<span class="value">TRUTH</span>
+<span class="value">PRESERVATION</span>
+<span class="value">JUSTICE</span>
+<span class="value">DIGNITY</span>
+<span class="value">COURAGE</span>
+<span class="value">HOPE</span>
+</div>
+</div>
+</section>
+
+<section id="witness">
+<div class="container">
+<div class="kicker">01 — The Witness</div>
+<h2 class="section-title">A LIFE PRESERVED.</h2>
+
+<p class="intro">
+The Church of Barran Dodger presents the public work, testimony, writing,
+research, creative work and documentary archive of Dr Richard William McLean,
+writing as Barran Dodger.
+</p>
+
+<div class="quote">
+“They could not erase what God preserved.”
+</div>
+
+<p class="intro">
+That sentence belongs to the author's faith and spiritual interpretation of
+his life and survival. It is presented here as testimony and belief,
+distinct from documentary evidence and official findings.
+</p>
+</div>
+</section>
+
+<section id="archive">
+<div class="container">
+<div class="kicker">02 — Documentary Archive</div>
+<h2 class="section-title">THE ARCHIVE.</h2>
+
+<p class="intro">
+A public finding aid connecting testimony, government records, legal and
+administrative material, correspondence, writings, evidence, chronology,
+forensic material and preservation records.
+</p>
+
+<input
+class="search"
+id="search"
+type="search"
+placeholder="Search this page: archive, evidence, government, Gospel, prophecy..."
+aria-label="Search archive"
+/>
+
+<div class="grid" id="cards">
+
+<div class="card searchable">
+<div class="label">Primary Archive</div>
+<h3>The Witness Remains</h3>
+<p>The principal public documentary archive.</p>
+<a href="https://wezzo72.github.io/Barrandodger/" target="_blank">Open Archive →</a>
+</div>
+
+<div class="card searchable">
+<div class="label">Reconstruction</div>
+<h3>Rebuild Archive</h3>
+<p>A finding aid and reconstructed preservation archive.</p>
+<a href="https://wezzo72.github.io/barrandodger-rebuild/" target="_blank">Open Rebuild →</a>
+</div>
+
+<div class="card searchable">
+<div class="label">Repository</div>
+<h3>GitHub — Dr Barran Dodger</h3>
+<p>Public repositories and source material.</p>
+<a href="https://github.com/drbarrandodger" target="_blank">Open GitHub →</a>
+</div>
+
+<div class="card searchable">
+<div class="label">Repository</div>
+<h3>GitHub — Wezzo72</h3>
+<p>Public repositories containing archive material.</p>
+<a href="https://github.com/wezzo72" target="_blank">Open GitHub →</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="evidence">
+<div class="container">
+<div class="kicker">03 — Evidence Method</div>
+<h2 class="section-title">PRESERVE FIRST.<br>EXAMINE SECOND.<br>CONCLUDE LAST.</h2>
+
+<p class="intro">
+The archive distinguishes documentary records from claims, allegations,
+inferences, interpretations, speculation and spiritual belief.
+</p>
+
+<div class="chain">
+<span>CLAIM</span>
+<span>→</span>
+<span>SOURCE</span>
+<span>→</span>
+<span>DOCUMENT</span>
+<span>→</span>
+<span>RESPONSE</span>
+<span>→</span>
+<span>OUTCOME</span>
+<span>→</span>
+<span>STATUS</span>
+</div>
+
+<div class="grid">
+<div class="card">
+<div class="label">A</div>
+<h3>Documented Fact</h3>
+<p>Supported directly by an identifiable primary record or official source.</p>
+</div>
+
+<div class="card">
+<div class="label">B</div>
+<h3>Corroborated Claim</h3>
+<p>A claim supported by multiple relevant sources.</p>
+</div>
+
+<div class="card">
+<div class="label">C</div>
+<h3>Documented Allegation</h3>
+<p>An allegation recorded in documentary material but not established as fact.</p>
+</div>
+
+<div class="card">
+<div class="label">D</div>
+<h3>Inference / Interpretation</h3>
+<p>An interpretation drawn from available records.</p>
+</div>
+
+<div class="card">
+<div class="label">E</div>
+<h3>Speculation</h3>
+<p>A possibility or hypothesis requiring further evidence.</p>
+</div>
+</div>
+
+<div class="notice" style="margin-top:30px">
+<strong>IMPORTANT:</strong><br>
+This archive is not a court and does not issue legal verdicts.
+An allegation remains an allegation unless independently established.
+Faith and spiritual interpretation are presented separately from
+documentary findings.
+</div>
+</div>
+</section>
+
+<section id="government">
+<div class="container">
+<div class="kicker">04 — Official Records</div>
+<h2 class="section-title">GOVERNMENT.</h2>
+
+<p class="intro">
+Government and institutional records should be examined through their
+original source, date, issuing body, document type and provenance.
+</p>
+
+<div class="grid">
+<div class="card">
+<h3>Official Documents</h3>
+<p>Government correspondence, administrative records and other official material.</p>
+<a href="https://wezzo72.github.io/Barrandodger/" target="_blank">Search the archive →</a>
+</div>
+
+<div class="card">
+<h3>Legal & Administrative</h3>
+<p>Legal, administrative, regulatory and procedural records preserved in the archive.</p>
+<a href="https://wezzo72.github.io/barrandodger-rebuild/" target="_blank">Open finding aid →</a>
+</div>
+
+<div class="card">
+<h3>Preservation</h3>
+<p>Where available, source provenance can include filenames, paths, commits,
+hashes and other preservation metadata.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="gospels">
+<div class="container">
+<div class="kicker">05 — Faith / Spiritual Writing</div>
+<h2 class="section-title">THE GOSPELS OF<br>BARRAN DODGER.</h2>
+
+<p class="intro">
+These writings belong to the author's spiritual and theological work.
+They are presented as faith writing, not as independently verified
+documentary findings.
+</p>
+
+<div class="grid">
+<div class="card">
+<div class="label">Gospel</div>
+<h3>The Gospel of the Love Chain</h3>
+<p>A central work concerning love, connection, dignity and spiritual purpose.</p>
+<a href="https://wezzo72.github.io/Barrandodger/" target="_blank">Find source material →</a>
+</div>
+
+<div class="card">
+<div class="label">Gospel</div>
+<h3>The Gospel of Barran Dodger</h3>
+<p>Spiritual writing associated with the emergence of the Barran Dodger identity.</p>
+<a href="https://wezzo72.github.io/Barrandodger/" target="_blank">Find source material →</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="prophecy">
+<div class="container">
+<div class="kicker">06 — Faith / Spiritual Writing</div>
+<h2 class="section-title">PROPHECY.</h2>
+
+<p class="intro">
+Prophetic and spiritual writings are preserved here as authored testimony
+and faith interpretation. The site does not present spiritual claims as
+independently established facts.
+</p>
+
+<div class="grid">
+<div class="card">
+<h3>The Witness</h3>
+<p>Writing concerning testimony, survival and preservation.</p>
+</div>
+
+<div class="card">
+<h3>The Preservation</h3>
+<p>The theological interpretation that truth can survive attempts to erase it.</p>
+</div>
+
+<div class="card">
+<h3>The Justice Mandate</h3>
+<p>A faith-based call toward truth, accountability, mercy and justice.</p>
+</div>
+
+<div class="card">
+<h3>The Hope</h3>
+<p>The possibility of rebuilding a life through truth, creativity and love.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="books">
+<div class="container">
+<div class="kicker">07 — Writing</div>
+<h2 class="section-title">BOOKS & WORKS.</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="label">Book</div>
+<h3>Recovered, Not Cured</h3>
+<p><em>A Journey Through Schizophrenia</em>.</p>
+<a href="https://wezzo72.github.io/Barrandodger/" target="_blank">Archive source →</a>
+</div>
+
+<div class="card">
+<div class="label">Work</div>
+<h3>Betrayed, Murdered, Forsaken</h3>
+<p>A major work preserved within the author's body of writing.</p>
+<a href="https://wezzo72.github.io/Barrandodger/" target="_blank">Archive source →</a>
+</div>
+
+<div class="card">
+<div class="label">Declaration</div>
+<h3>Declaration of Sovereign Vindication</h3>
+<p>A later documentary and philosophical work.</p>
+<a href="https://wezzo72.github.io/Barrandodger/" target="_blank">Archive source →</a>
+</div>
+
+<div class="card">
+<div class="label">Research / Writing</div>
+<h3>The Architecture of Administrative Annihilation</h3>
+<p>Writing concerning administration, systems, records and accountability.</p>
+<a href="https://wezzo72.github.io/Barrandodger/" target="_blank">Archive source →</a>
+</div>
+
+<div class="card">
+<div class="label">Prophetic Writing</div>
+<h3>They Could Not Erase What God Preserved</h3>
+<p>A faith-based interpretation of survival and preservation.</p>
+<a href="https://wezzo72.github.io/Barrandodger/" target="_blank">Archive source →</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="justice">
+<div class="container">
+<div class="kicker">08 — Justice Mandate</div>
+<h2 class="section-title">TRUTH DESERVES<br>PRESERVATION.</h2>
+
+<p class="intro">
+The project calls for careful examination of records, independent scrutiny
+where appropriate, accountability where evidence supports it, and dignity
+for people whose lives become subjects of institutional records.
+</p>
+
+<div class="quote">
+A person should not be reduced to the worst thing written about them.
+</div>
+
+<p class="intro">
+The archive is offered as a resource for journalists, lawyers, researchers,
+historians, advocates, investigators, academics, public officials and
+members of the public.
+</p>
+</div>
+</section>
+
+<section id="hope">
+<div class="container">
+<div class="kicker">09 — Hope</div>
+<h2 class="section-title">YOUR STORY<br>MATTERS.</h2>
+
+<p class="intro">
+Truth matters. Records matter. Human dignity matters. And a difficult
+history does not have to be the end of a person's story.
+</p>
+
+<div class="grid">
+<div class="card">
+<h3>Document</h3>
+<p>Preserve what happened as accurately as possible.</p>
+</div>
+
+<div class="card">
+<h3>Question</h3>
+<p>Distinguish evidence from assumption.</p>
+</div>
+
+<div class="card">
+<h3>Create</h3>
+<p>Turn experience into writing, art, research and meaning.</p>
+</div>
+
+<div class="card">
+<h3>Hope</h3>
+<p>Keep open the possibility of truth, justice, restoration and love.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+<div class="kicker">10 — About</div>
+<h2 class="section-title">BARRAN DODGER.</h2>
+
+<p class="intro">
+Dr Richard William McLean writes and publishes as Barran Dodger.
+The Church of Barran Dodger brings together his public documentary archive,
+writing, research, creative work, testimony and spiritual writings.
+</p>
+
+<p class="intro">
+The documentary archive and the author's interpretation of that archive
+should always be distinguished. Readers are encouraged to examine original
+records and form their own conclusions.
+</p>
+</div>
+</section>
+
+<section id="sources">
+<div class="container">
+<div class="kicker">11 — Sources</div>
+<h2 class="section-title">GO TO THE RECORD.</h2>
+
+<div class="grid">
+<div class="card">
+<h3>Main Archive</h3>
+<a href="https://wezzo72.github.io/Barrandodger/" target="_blank">
+wezzo72.github.io/Barrandodger
+</a>
+</div>
+
+<div class="card">
+<h3>Rebuild Archive</h3>
+<a href="https://wezzo72.github.io/barrandodger-rebuild/" target="_blank">
+wezzo72.github.io/barrandodger-rebuild
+</a>
+</div>
+
+<div class="card">
+<h3>Dr Barran Dodger GitHub</h3>
+<a href="https://github.com/drbarrandodger" target="_blank">
+github.com/drbarrandodger
+</a>
+</div>
+
+<div class="card">
+<h3>Wezzo72 GitHub</h3>
+<a href="https://github.com/wezzo72" target="_blank">
+github.com/wezzo72
+</a>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="container">
+<strong>THE WITNESS REMAINS — THE CHURCH OF BARRAN DODGER</strong>
+<p>
+Preservation first. Examination second. Conclusion last.
+</p>
+<p class="small">
+This website is a documentary and faith-based publication interface.
+It does not constitute a court, legal judgment or independent determination
+of the truth of every claim presented in the underlying archive.
+</p>
+</div>
+</footer>
+
+<script>
+const search = document.getElementById("search");
+const cards = document.querySelectorAll(".searchable");
+
+search.addEventListener("input", function(){
+  const term = this.value.toLowerCase().trim();
+
+  cards.forEach(card=>{
+    const text = card.innerText.toLowerCase();
+    card.style.display = text.includes(term) ? "" : "none";
+  });
+});
+</script>
+
+</body>
+</html>
