@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Witness Remains — Evidence, preservation, provenance and documentary methodology of the Barran Dodger archive.">
+<title>Evidence — The Witness Remains</title>
+
+<style>
+:root {
+  --black:#090909;
+  --black2:#11110f;
+  --paper:#e8dfcf;
+  --paper2:#d8ccb7;
+  --ink:#171512;
+  --gold:#b89a5a;
+  --gold2:#d1b778;
+  --muted:#aaa394;
+  --line:rgba(184,154,90,.28);
+  --white:#f5f1e8;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+html {
+  scroll-behavior:smooth;
+}
+
+body {
+  margin:0;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(184,154,90,.08), transparent 28%),
+    radial-gradient(circle at 80% 70%, rgba(184,154,90,.05), transparent 30%),
+    var(--black);
+  color:var(--white);
+  font-family:Georgia, "Times New Roman", serif;
+  line-height:1.7;
+}
+
+a {
+  color:var(--gold2);
+  text-decoration:none;
+}
+
+a:hover {
+  text-decoration:underline;
+}
+
+.nav {
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(9,9,9,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+  padding:14px 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.brand {
+  font-size:.82rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--paper);
+}
+
+.navlinks {
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+
+.navlinks a {
+  font-family:Arial, sans-serif;
+  font-size:.72rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
+.navlinks a:hover {
+  color:var(--gold2);
+}
+
+.container {
+  width:min(1120px, 90%);
+  margin:auto;
+}
+
+.hero {
+  padding:105px 0 80px;
+  border-bottom:1px solid var(--line);
+}
+
+.kicker {
+  font-family:Arial, sans-serif;
+  font-size:.72rem;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--gold2);
+  margin-bottom:18px;
+}
+
+h1 {
+  margin:0;
+  font-size:clamp(3rem,8vw,6.5rem);
+  line-height:.92;
+  font-weight:400;
+  letter-spacing:-.04em;
+}
+
+.subtitle {
+  max-width:760px;
+  margin:30px 0 0;
+  font-size:clamp(1.15rem,2.2vw,1.55rem);
+  color:var(--paper2);
+}
+
+.stamp {
+  display:inline-block;
+  margin-top:34px;
+  padding:8px 14px;
+  border:1px solid var(--gold);
+  color:var(--gold2);
+  font-family:Arial,sans-serif;
+  font-size:.68rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+
+section {
+  padding:78px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.eyebrow {
+  font-family:Arial,sans-serif;
+  color:var(--gold2);
+  font-size:.7rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+
+h2 {
+  margin:0 0 22px;
+  font-size:clamp(2rem,5vw,3.5rem);
+  font-weight:400;
+  line-height:1.05;
+}
+
+h3 {
+  font-size:1.35rem;
+  font-weight:400;
+  margin-top:0;
+}
+
+.lead {
+  max-width:820px;
+  font-size:1.12rem;
+  color:var(--paper2);
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+  margin-top:36px;
+}
+
+.card {
+  background:linear-gradient(145deg, rgba(232,223,207,.06), rgba(232,223,207,.025));
+  border:1px solid rgba(184,154,90,.22);
+  padding:30px;
+}
+
+.card p {
+  color:#c7c0b2;
+}
+
+.number {
+  font-family:Arial,sans-serif;
+  color:var(--gold);
+  font-size:.72rem;
+  letter-spacing:.15em;
+}
+
+.method {
+  margin-top:35px;
+  padding:28px;
+  border-left:3px solid var(--gold);
+  background:rgba(184,154,90,.06);
+}
+
+.method strong {
+  display:block;
+  color:var(--gold2);
+  font-family:Arial,sans-serif;
+  letter-spacing:.12em;
+  font-size:.75rem;
+  margin-bottom:8px;
+}
+
+.chain {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:28px;
+}
+
+.chain span {
+  border:1px solid var(--line);
+  padding:10px 14px;
+  font-family:Arial,sans-serif;
+  font-size:.7rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--paper);
+}
+
+.scale {
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px;
+  margin-top:30px;
+}
+
+.scale div {
+  padding:20px 14px;
+  border:1px solid var(--line);
+  min-height:150px;
+}
+
+.scale b {
+  display:block;
+  font-family:Arial,sans-serif;
+  color:var(--gold2);
+  font-size:1rem;
+  margin-bottom:8px;
+}
+
+.scale small {
+  color:var(--muted);
+  font-family:Arial,sans-serif;
+  font-size:.75rem;
+  line-height:1.5;
+}
+
+.notice {
+  margin-top:30px;
+  padding:24px;
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.025);
+  color:#c9c2b4;
+}
+
+.buttonrow {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:28px;
+}
+
+.button {
+  display:inline-block;
+  border:1px solid var(--gold);
+  padding:12px 18px;
+  font-family:Arial,sans-serif;
+  font-size:.7rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+.button:hover {
+  background:rgba(184,154,90,.12);
+  text-decoration:none;
+}
+
+.quote {
+  font-size:clamp(1.5rem,3vw,2.3rem);
+  line-height:1.3;
+  color:var(--paper);
+  margin:30px 0;
+}
+
+.quote cite {
+  display:block;
+  margin-top:15px;
+  font-family:Arial,sans-serif;
+  font-style:normal;
+  font-size:.65rem;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  color:var(--gold2);
+}
+
+footer {
+  padding:55px 0;
+  color:#8e897e;
+  font-family:Arial,sans-serif;
+  font-size:.72rem;
+  letter-spacing:.08em;
+}
+
+@media(max-width:800px) {
+  .grid,
+  .scale {
+    grid-template-columns:1fr;
+  }
+
+  .nav {
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .hero {
+    padding-top:70px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior:auto;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav class="nav">
+  <div class="brand">The Witness Remains</div>
+
+  <div class="navlinks">
+    <a href="index.html">Home</a>
+    <a href="archive.html">Archive</a>
+    <a href="evidence.html">Evidence</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="writings.html">Writings</a>
+    <a href="justice.html">Justice</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+
+    <div class="kicker">The Witness Remains · Documentary Evidence</div>
+
+    <h1>EVIDENCE</h1>
+
+    <p class="subtitle">
+      A framework for preserving, locating, examining and distinguishing
+      documentary records, testimony, claims, allegations, inference and faith.
+    </p>
+
+    <div class="stamp">
+      PRESERVE FIRST · EXAMINE SECOND · CONCLUDE LAST
+    </div>
+
+  </div>
+</header>
+
+<section>
+  <div class="container">
+
+    <div class="eyebrow">01 · Purpose</div>
+
+    <h2>The record comes first.</h2>
+
+    <p class="lead">
+      The Evidence section of The Witness Remains is intended as a finding aid
+      for the underlying documentary archive. Its purpose is preservation,
+      provenance, navigation and critical examination — not the manufacture of
+      conclusions.
+    </p>
+
+    <p class="lead">
+      The archive contains material described by Barran Dodger as including
+      government correspondence, official records, legal and administrative
+      documents, FOI material, messages, recordings, chronology, forensic
+      material, writings and records of digital preservation.
+    </p>
+
+    <div class="notice">
+      <strong>IMPORTANT:</strong>
+      A document being present in an archive does not, by itself, prove every
+      proposition that someone may draw from it. Documents must be read in
+      context, authenticated where appropriate, compared with other records,
+      and distinguished from interpretation.
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <div class="eyebrow">02 · Evidence Chain</div>
+
+    <h2>Follow the chain.</h2>
+
+    <p class="lead">
+      Where possible, an allegation or proposition should be traceable through
+      the underlying record rather than presented as an unsupported conclusion.
+    </p>
+
+    <div class="chain">
+      <span>Claim</span>
+      <span>Source</span>
+      <span>Document</span>
+      <span>Response</span>
+      <span>Outcome</span>
+      <span>Status</span>
+    </div>
+
+    <div class="method">
+      <strong>THE PRINCIPLE</strong>
+      If a proposition cannot be traced to an identifiable source, it should
+      not be presented as though the archive itself has established it.
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <div class="eyebrow">03 · Classification</div>
+
+    <h2>Not everything in a record is the same kind of evidence.</h2>
+
+    <p class="lead">
+      The following working classification is intended to make the distinction
+      visible to readers.
+    </p>
+
+    <div class="scale">
+
+      <div>
+        <b>A · DOCUMENTED FACT</b>
+        <small>
+          A proposition directly established by an identifiable primary record
+          or official source, subject to the limits of that record.
+        </small>
+      </div>
+
+      <div>
+        <b>B · CORROBORATED CLAIM</b>
+        <small>
+          A claim supported by more than one relevant source or independent
+          record, without implying a judicial finding.
+        </small>
+      </div>
+
+      <div>
+        <b>C · DOCUMENTED ALLEGATION</b>
+        <small>
+          An allegation recorded in a document, correspondence, complaint,
+          statement or other identifiable source.
+        </small>
+      </div>
+
+      <div>
+        <b>D · INFERENCE</b>
+        <small>
+          An interpretation or conclusion drawn from available material rather
+          than directly established by the underlying record.
+        </small>
+      </div>
+
+      <div>
+        <b>E · SPECULATION</b>
+        <small>
+          A possibility, hypothesis or proposition for which sufficient
+          documentary support has not been established.
+        </small>
+      </div>
+
+    </div>
+
+    <div class="notice">
+      <strong>UNRESOLVED</strong><br>
+      Some matters may remain unresolved. “Unresolved” is not a finding that
+      something did or did not occur. It records the present state of the
+      available material.
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <div class="eyebrow">04 · Preservation</div>
+
+    <h2>Preservation is part of the evidence.</h2>
+
+    <p class="lead">
+      The archive seeks to preserve source material in a form that allows
+      future readers to locate the underlying record and examine its
+      provenance.
+    </p>
+
+    <div class="grid">
+
+      <article class="card">
+        <div class="number">01</div>
+        <h3>Original source</h3>
+        <p>
+          The preferred reference is the original public document or repository
+          location wherever available.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="number">02</div>
+        <h3>Filename & path</h3>
+        <p>
+          Original filenames and repository paths can provide useful
+          provenance and navigation information.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="number">03</div>
+        <h3>Git history</h3>
+        <p>
+          Public repository history may provide additional information about
+          when a file was committed or preserved.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="number">04</div>
+        <h3>SHA-256 & hashes</h3>
+        <p>
+          Cryptographic hashes can be used to identify a particular digital
+          file and detect subsequent changes to its contents.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="number">05</div>
+        <h3>Blockchain records</h3>
+        <p>
+          Where blockchain or timestamp records are provided, they should be
+          treated as preservation or provenance records rather than automatic
+          proof of the truth of the underlying document.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="number">06</div>
+        <h3>Independent examination</h3>
+        <p>
+          Preservation allows journalists, lawyers, researchers, historians,
+          investigators and other qualified reviewers to examine the material
+          independently.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <div class="eyebrow">05 · Source Integrity</div>
+
+    <h2>Do not confuse preservation with proof.</h2>
+
+    <p class="lead">
+      A hash can demonstrate that a particular digital object has a particular
+      content state. A blockchain timestamp can establish that a record was
+      anchored at a particular point in time. Neither mechanism, by itself,
+      determines whether the underlying assertions contained in a document are
+      true.
+    </p>
+
+    <p class="lead">
+      Likewise, the existence of an official government document can establish
+      that the document exists and may establish what an agency recorded,
+      decided, communicated or received. It does not automatically establish
+      that every assertion inside that document is correct.
+    </p>
+
+    <div class="method">
+      <strong>THE RULE</strong>
+      Preserve the source. Identify the provenance. Read the whole record.
+      Compare related documents. Identify the response. Record what remains
+      unresolved.
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <div class="eyebrow">06 · The Existing Archives</div>
+
+    <h2>Go to the underlying record.</h2>
+
+    <p class="lead">
+      This Evidence page is a guide. The underlying documentary material remains
+      in the public archives and repositories.
+    </p>
+
+    <div class="buttonrow">
+
+      <a class="button"
+         href="https://wezzo72.github.io/Barrandodger/"
+         target="_blank"
+         rel="noopener">
+        Main Archive
+      </a>
+
+      <a class="button"
+         href="https://wezzo72.github.io/barrandodger-rebuild/"
+         target="_blank"
+         rel="noopener">
+        Rebuild Archive
+      </a>
+
+      <a class="button"
+         href="https://github.com/drbarrandodger"
+         target="_blank"
+         rel="noopener">
+        GitHub · Dr Barran Dodger
+      </a>
+
+      <a class="button"
+         href="https://github.com/wezzo72"
+         target="_blank"
+         rel="noopener">
+        GitHub · Wezzo72
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <div class="eyebrow">07 · A Boundary</div>
+
+    <h2>Not a court. Not a verdict.</h2>
+
+    <p class="lead">
+      The Witness Remains is a documentary archive and finding aid. It does not
+      determine criminal guilt, civil liability or legal responsibility.
+    </p>
+
+    <p class="lead">
+      The presence of a document, allegation or testimony in the archive should
+      not be interpreted as an independent finding that the allegation is true.
+      Disputed matters remain disputed or unresolved unless supported by an
+      appropriate authoritative determination.
+    </p>
+
+    <p class="lead">
+      Nothing on this page replaces legal advice, professional investigation,
+      judicial determination or independent review.
+    </p>
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <div class="eyebrow">08 · Faith & Testimony</div>
+
+    <h2>Faith is preserved as faith.</h2>
+
+    <p class="lead">
+      The archive also contains spiritual, Gospel and prophetic writings.
+      These writings are part of Barran Dodger's testimony and creative record,
+      but they are not presented here as independently verified documentary
+      facts.
+    </p>
+
+    <p class="quote">
+      “The witness remains.”
+      <cite>Archive title and organising proposition</cite>
+    </p>
+
+    <p class="lead">
+      Statements concerning God, providence, calling, anointing, prophecy or
+      divine purpose are therefore identified as matters of faith, spiritual
+      interpretation or personal testimony where appropriate.
+    </p>
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <div class="eyebrow">09 · The Invitation</div>
+
+    <h2>Read the record yourself.</h2>
+
+    <p class="lead">
+      The purpose of preservation is not to demand belief. It is to make the
+      underlying material available for examination.
+    </p>
+
+    <p class="lead">
+      Journalists, lawyers, researchers, historians, advocates, investigators,
+      academics, public officials and members of the public are invited to
+      examine the primary material critically and independently.
+    </p>
+
+    <div class="method">
+      <strong>PRESERVE FIRST · EXAMINE SECOND · CONCLUDE LAST</strong>
+      The archive remains open to correction, clarification, corroboration and
+      independent scrutiny.
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+
+    THE WITNESS REMAINS — DR BARRAN DODGER
+
+    <br><br>
+
+    A PUBLIC DOCUMENTARY ARCHIVE OF TESTIMONY, GOVERNMENT RECORDS,
+    EVIDENCE, PRESERVATION AND THE SEARCH FOR ACCOUNTABILITY.
+
+    <br><br>
+
+    This page is an informational finding aid. It is not a court, verdict,
+    legal determination or independent investigation.
+
+    <br><br>
+
+    © 2026 Barran Dodger · Public Archive
+
+  </div>
+</footer>
+
+</body>
+</html>
