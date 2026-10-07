@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Witness Remains — Justice, accountability and human dignity">
+<title>Justice — The Witness Remains</title>
+
+<style>
+:root{
+  --black:#080808;
+  --paper:#eee7d8;
+  --paper2:#d8cfbd;
+  --gold:#b99a58;
+  --gold2:#d1b675;
+  --muted:#aaa18f;
+  --line:rgba(185,154,88,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--black);
+  color:var(--paper);
+  font-family:Georgia,"Times New Roman",serif;
+  line-height:1.7;
+}
+a{color:var(--gold2);text-decoration:none}
+a:hover{text-decoration:underline}
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(8,8,8,.97);
+  border-bottom:1px solid var(--line);
+  padding:14px 5%;
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  font-family:Arial,sans-serif;
+  font-size:.78rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+nav a{color:#d8cfbd}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:0 5%;
+}
+
+.hero{
+  padding:100px 5% 80px;
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(circle at 80% 20%,rgba(185,154,88,.11),transparent 30%),
+    linear-gradient(180deg,#0d0d0d,#080808);
+}
+
+.kicker{
+  color:var(--gold2);
+  font-family:Arial,sans-serif;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  font-size:.75rem;
+}
+
+h1{
+  font-size:clamp(3rem,9vw,7rem);
+  line-height:.95;
+  margin:18px 0;
+  font-weight:normal;
+}
+
+.subtitle{
+  max-width:820px;
+  font-size:1.25rem;
+  color:var(--paper2);
+}
+
+section{
+  padding:70px 0;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+h2{
+  font-size:2.1rem;
+  font-weight:normal;
+  margin-top:0;
+}
+
+h3{
+  font-size:1.35rem;
+  color:var(--gold2);
+}
+
+.lead{
+  font-size:1.12rem;
+  max-width:850px;
+}
+
+.notice{
+  border-left:3px solid var(--gold);
+  background:#111;
+  padding:24px 28px;
+  margin:30px 0;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:18px;
+  margin-top:30px;
+}
+
+.card{
+  border:1px solid var(--line);
+  padding:25px;
+  background:linear-gradient(145deg,#121212,#0b0b0b);
+}
+
+.card strong{
+  display:block;
+  color:var(--gold2);
+  margin-bottom:8px;
+  font-family:Arial,sans-serif;
+  font-size:.8rem;
+  letter-spacing:.1em;
+}
+
+.number{
+  font-family:Arial,sans-serif;
+  font-size:.75rem;
+  letter-spacing:.15em;
+  color:var(--gold);
+}
+
+.chain{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(145px,1fr));
+  gap:10px;
+  margin:30px 0;
+}
+
+.step{
+  border:1px solid var(--line);
+  padding:18px;
+  text-align:center;
+  font-family:Arial,sans-serif;
+  font-size:.75rem;
+  letter-spacing:.08em;
+}
+
+.quote{
+  margin:35px 0;
+  padding:32px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  font-size:1.45rem;
+  font-style:italic;
+  color:var(--paper2);
+}
+
+.small{
+  color:var(--muted);
+  font-size:.88rem;
+}
+
+footer{
+  padding:55px 5%;
+  text-align:center;
+  color:var(--muted);
+  font-size:.9rem;
+}
+
+@media(max-width:650px){
+  nav{gap:10px;padding:12px 4%}
+  .hero{padding:70px 5% 55px}
+  section{padding:50px 0}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="archive.html">Archive</a>
+  <a href="evidence.html">Evidence</a>
+  <a href="government-documents.html">Government</a>
+  <a href="legal.html">Legal</a>
+  <a href="forensics.html">Forensics</a>
+  <a href="timeline.html">Timeline</a>
+  <a href="testimony.html">Testimony</a>
+  <a href="writings.html">Writings</a>
+  <a href="gospels.html">Gospels</a>
+  <a href="prophecy.html">Prophecy</a>
+  <a href="justice.html">Justice</a>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="kicker">The Witness Remains · Accountability</div>
+    <h1>JUSTICE</h1>
+    <p class="subtitle">
+      A public-interest framework for examining records, accountability,
+      institutional responsibility, human dignity and the search for
+      independent review.
+    </p>
+  </div>
+</header>
+
+<main class="container">
+
+<section>
+  <h2>Justice Is a Question, Not a Verdict</h2>
+
+  <p class="lead">
+    The Witness Remains does not claim to be a court. Its purpose is to
+    preserve material that may assist journalists, lawyers, researchers,
+    advocates, investigators, public officials and other readers in examining
+    questions of accountability.
+  </p>
+
+  <p>
+    The archive distinguishes between what a document establishes, what a
+    person alleges, what can be corroborated and what remains unresolved.
+  </p>
+
+  <div class="notice">
+    <strong>NOT A COURT. NOT A VERDICT.</strong>
+    <p>
+      The archive does not determine criminal guilt or legal liability. It
+      preserves and organises material so that questions can be examined by
+      people and institutions with appropriate authority.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>The Justice Mandate</h2>
+
+  <p class="lead">
+    The author's stated purpose is not simply to preserve a personal history,
+    but to seek accountability, dignity and an independent examination of the
+    documentary record.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="number">01</div>
+      <h3>TRUTH</h3>
+      <p>
+        Preserve the underlying record rather than allowing important
+        documents to disappear from view.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="number">02</div>
+      <h3>ACCOUNTABILITY</h3>
+      <p>
+        Ask appropriate institutions to examine documented conduct and
+        unresolved questions within their lawful jurisdiction.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="number">03</div>
+      <h3>DIGNITY</h3>
+      <p>
+        Treat the people described in records as human beings whose rights and
+        dignity matter.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="number">04</div>
+      <h3>INDEPENDENCE</h3>
+      <p>
+        Seek examination by bodies capable of considering evidence without
+        relying solely upon the account of one interested party.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="number">05</div>
+      <h3>TRANSPARENCY</h3>
+      <p>
+        Make source material and provenance visible wherever lawful and
+        practicable.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="number">06</div>
+      <h3>REMEDY</h3>
+      <p>
+        Preserve the question of appropriate remedy where harm is established
+        by a competent authority.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>From Record to Accountability</h2>
+
+  <p>
+    A responsible accountability process should not jump directly from an
+    allegation to a conclusion.
+  </p>
+
+  <div class="chain">
+    <div class="step">RECORD</div>
+    <div class="step">QUESTION</div>
+    <div class="step">RESPONSE</div>
+    <div class="step">INVESTIGATION</div>
+    <div class="step">FINDING</div>
+    <div class="step">REMEDY</div>
+    <div class="step">REVIEW</div>
+  </div>
+
+  <p>
+    The archive can preserve the first stages and document the responses it
+    receives. It cannot manufacture an independent finding where none exists.
+  </p>
+</section>
+
+<section>
+  <h2>Questions for Independent Examination</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <strong>WHAT HAPPENED?</strong>
+      <p>
+        What events are supported by contemporaneous records?
+      </p>
+    </div>
+
+    <div class="card">
+      <strong>WHO KNEW?</strong>
+      <p>
+        What information was available to relevant decision-makers at the
+        relevant time?
+      </p>
+    </div>
+
+    <div class="card">
+      <strong>WHAT WAS DONE?</strong>
+      <p>
+        What actions, decisions or omissions are documented?
+      </p>
+    </div>
+
+    <div class="card">
+      <strong>WHAT WAS THE RESPONSE?</strong>
+      <p>
+        How did institutions respond when concerns were raised?
+      </p>
+    </div>
+
+    <div class="card">
+      <strong>WHAT REMAINS UNRESOLVED?</strong>
+      <p>
+        Which questions cannot presently be answered from the available
+        material?
+      </p>
+    </div>
+
+    <div class="card">
+      <strong>WHAT SHOULD BE REVIEWED?</strong>
+      <p>
+        Which matters warrant examination by an appropriately independent
+        authority?
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Human Rights Context</h2>
+
+  <p>
+    The archive identifies possible human-rights questions for consideration
+    in the appropriate legal and institutional context. These references are
+    not presented as findings that a particular right has been breached.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <strong>ICCPR</strong>
+      <p>
+        Civil and political rights, including questions of equality, liberty,
+        privacy, expression and access to justice.
+      </p>
+    </div>
+
+    <div class="card">
+      <strong>ICESCR</strong>
+      <p>
+        Economic, social and cultural rights and the conditions necessary for
+        human dignity.
+      </p>
+    </div>
+
+    <div class="card">
+      <strong>CRPD</strong>
+      <p>
+        Disability rights and equal participation, including the principles
+        reflected in Articles 5, 12, 13, 16, 17, 19, 22, 25 and 28.
+      </p>
+    </div>
+
+    <div class="card">
+      <strong>OTHER CONVENTIONS</strong>
+      <p>
+        The archive identifies the possible relevance of CAT, CEDAW, CERD and
+        CRC depending upon the facts and legal questions under examination.
+      </p>
+    </div>
+
+  </div>
+
+  <p class="small">
+    International-law references require legal analysis of the particular facts,
+    jurisdiction and applicable domestic law. They are not themselves findings
+    of breach.
+  </p>
+</section>
+
+<section>
+  <h2>Australian Accountability Context</h2>
+
+  <p>
+    The archive may contain material relevant to questions involving Australian
+    government departments, agencies, service systems, administrative bodies
+    and public authorities.
+  </p>
+
+  <p>
+    Depending upon the subject matter and jurisdiction, relevant avenues may
+    include courts and tribunals, complaints bodies, ombudsman processes,
+    integrity bodies, human-rights mechanisms, disability-rights mechanisms or
+    other authorised review processes.
+  </p>
+
+  <div class="notice">
+    <strong>AUTHORITY MATTERS.</strong>
+    <p>
+      The existence of an allegation or documentary record does not determine
+      which institution has jurisdiction to investigate it. Each matter must
+      be assessed according to the applicable law and procedure.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Evidence Before Conclusion</h2>
+
+  <p>
+    The justice section depends upon the same evidence discipline used
+    throughout the archive.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <strong>A — DOCUMENTED FACT</strong>
+      <p>Directly supported by an identifiable record.</p>
+    </div>
+
+    <div class="card">
+      <strong>B — CORROBORATED CLAIM</strong>
+      <p>Supported by additional identifiable material.</p>
+    </div>
+
+    <div class="card">
+      <strong>C — DOCUMENTED ALLEGATION</strong>
+      <p>Recorded allegation without an archive finding of truth.</p>
+    </div>
+
+    <div class="card">
+      <strong>D — INFERENCE</strong>
+      <p>An interpretation drawn from available information.</p>
+    </div>
+
+    <div class="card">
+      <strong>E — SPECULATION</strong>
+      <p>A proposition not sufficiently established by available evidence.</p>
+    </div>
+
+    <div class="card">
+      <strong>UNRESOLVED</strong>
+      <p>No reliable conclusion presently established.</p>
+    </div>
+
+  </div>
+
+  <p>
+    <a href="evidence.html">Read the complete Evidence methodology →</a>
+  </p>
+</section>
+
+<section>
+  <h2>What the Archive Seeks</h2>
+
+  <p class="lead">
+    The stated objective is independent examination rather than predetermined
+    condemnation.
+  </p>
+
+  <p>
+    Where records establish wrongdoing, the appropriate response should be
+    determined by competent authorities. Where allegations cannot be
+    established, that should also be recorded honestly. Where questions remain
+    unresolved, the uncertainty should remain visible.
+  </p>
+
+  <div class="quote">
+    Preserve the record. Ask the question. Let the evidence be examined.
+  </div>
+</section>
+
+<section>
+  <h2>Justice and Hope</h2>
+
+  <p>
+    Justice within this archive is not presented only as punishment. It also
+    includes dignity, restoration, protection, truth, accountability and the
+    possibility of a future beyond the circumstances being documented.
+  </p>
+
+  <p>
+    This connects the documentary purpose of The Witness Remains with its
+    spiritual themes of mercy, courage, love and hope.
+  </p>
+
+  <p>
+    <a href="prophecy.html">Read Prophecy and Spiritual Writing →</a>
+  </p>
+
+  <p>
+    <a href="gospels.html">Read the Gospel writings →</a>
+  </p>
+</section>
+
+<section>
+  <h2>Primary Archives</h2>
+
+  <p>
+    <a href="https://wezzo72.github.io/Barrandodger/" target="_blank"
+       rel="noopener noreferrer">
+      Main Archive — The Witness Remains
+    </a>
+  </p>
+
+  <p>
+    <a href="https://wezzo72.github.io/barrandodger-rebuild/" target="_blank"
+       rel="noopener noreferrer">
+      Rebuild Archive — Finding Aid
+    </a>
+  </p>
+
+  <p>
+    <a href="archive.html">Archive Catalogue →</a>
+  </p>
+
+  <p>
+    <a href="government-documents.html">Government Documents →</a>
+  </p>
+
+  <p>
+    <a href="legal.html">Legal & Administrative Record →</a>
+  </p>
+</section>
+
+<section>
+  <h2>The Boundary</h2>
+
+  <div class="notice">
+    <strong>NOT A COURT. NOT A VERDICT.</strong>
+    <p>
+      The Witness Remains is a documentary archive and first-person research
+      project. It does not determine criminal guilt, establish legal
+      liability, replace legal advice or claim to exercise the powers of a
+      court, tribunal, regulator or investigative authority.
+    </p>
+    <p>
+      Allegations remain allegations unless established by an appropriate
+      authority or supported to the relevant evidentiary standard.
+    </p>
+  </div>
+
+  <p class="lead">
+    The search for justice begins with preserving what can be examined.
+  </p>
+</section>
+
+</main>
+
+<footer>
+  <p><strong>THE WITNESS REMAINS — DR BARRAN DODGER</strong></p>
+  <p>Truth · Accountability · Dignity · Justice · Mercy · Hope</p>
+  <p>PRESERVE FIRST · EXAMINE SECOND · CONCLUDE LAST</p>
+</footer>
+
+</body>
+</html>
