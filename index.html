@@ -27,13 +27,9 @@
   --blue:#8ea9b8;
 }
 
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box;}
 
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth;}
 
 body{
   margin:0;
@@ -49,8 +45,7 @@ body:before{
   inset:0;
   pointer-events:none;
   opacity:.035;
-  background-image:
-    radial-gradient(#fff 0.5px,transparent 0.5px);
+  background-image:radial-gradient(#fff 0.5px,transparent 0.5px);
   background-size:5px 5px;
   z-index:999;
 }
@@ -60,14 +55,9 @@ a{
   text-decoration:none;
 }
 
-a:hover{
-  text-decoration:underline;
-}
+a:hover{text-decoration:underline;}
 
-button,
-input{
-  font:inherit;
-}
+button,input{font:inherit;}
 
 .container{
   width:min(1180px,calc(100% - 40px));
@@ -126,9 +116,7 @@ nav{
   scrollbar-width:none;
 }
 
-nav::-webkit-scrollbar{
-  display:none;
-}
+nav::-webkit-scrollbar{display:none;}
 
 nav a{
   font-family:Arial,sans-serif;
@@ -194,9 +182,7 @@ nav a:hover{
   max-width:1000px;
 }
 
-.hero h1 span{
-  color:var(--gold);
-}
+.hero h1 span{color:var(--gold);}
 
 .lead{
   max-width:780px;
@@ -237,9 +223,7 @@ nav a:hover{
   color:#0c0b09;
 }
 
-.btn.primary:hover{
-  background:#d6b875;
-}
+.btn.primary:hover{background:#d6b875;}
 
 .manifesto{
   margin-top:60px;
@@ -259,9 +243,7 @@ nav a:hover{
   color:var(--muted);
 }
 
-.manifesto div:last-child{
-  border-right:0;
-}
+.manifesto div:last-child{border-right:0;}
 
 section{
   padding:100px 0;
@@ -403,9 +385,7 @@ section{
   outline:none;
 }
 
-.search-input:focus{
-  border-color:var(--gold);
-}
+.search-input:focus{border-color:var(--gold);}
 
 .search-count{
   margin-top:12px;
@@ -428,9 +408,7 @@ section{
   padding:22px;
 }
 
-.archive-item.hidden{
-  display:none;
-}
+.archive-item.hidden{display:none;}
 
 .archive-meta{
   display:flex;
@@ -474,9 +452,7 @@ section{
   text-align:center;
 }
 
-.method div:last-child{
-  border-right:0;
-}
+.method div:last-child{border-right:0;}
 
 .method strong{
   display:block;
@@ -532,9 +508,7 @@ section{
   color:var(--soft);
 }
 
-.notice strong{
-  color:var(--gold);
-}
+.notice strong{color:var(--gold);}
 
 .timeline{
   position:relative;
@@ -590,9 +564,7 @@ section{
     );
 }
 
-.faith .card{
-  background:rgba(18,16,12,.8);
-}
+.faith .card{background:rgba(18,16,12,.8);}
 
 .scripture{
   margin-top:45px;
@@ -674,77 +646,50 @@ footer{
 
 @media(max-width:800px){
 
-  .container{
-    width:min(100% - 28px,1180px);
-  }
+  .container{width:min(100% - 28px,1180px);}
 
   .nav{
     display:block;
     padding:14px 0;
   }
 
-  .brand{
-    margin-bottom:12px;
-  }
+  .brand{margin-bottom:12px;}
 
-  nav{
-    padding-bottom:4px;
-  }
+  nav{padding-bottom:4px;}
 
-  .hero h1{
-    letter-spacing:-2px;
-  }
+  .hero h1{letter-spacing:-2px;}
 
-  .manifesto{
-    grid-template-columns:repeat(2,1fr);
-  }
+  .manifesto{grid-template-columns:repeat(2,1fr);}
 
   .manifesto div{
     border-bottom:1px solid var(--line);
   }
 
-  .section-head{
-    display:block;
-  }
+  .section-head{display:block;}
 
-  .section-number{
-    margin-bottom:15px;
-  }
+  .section-number{margin-bottom:15px;}
 
-  section{
-    padding:70px 0;
-  }
+  section{padding:70px 0;}
 
-  .method{
-    grid-template-columns:1fr;
-  }
+  .method{grid-template-columns:1fr;}
 
   .method div{
     border-right:0;
     border-bottom:1px solid var(--line);
   }
 
-  .method div:last-child{
-    border-bottom:0;
-  }
+  .method div:last-child{border-bottom:0;}
 
-  .search-row{
-    flex-direction:column;
-  }
+  .search-row{flex-direction:column;}
 
-  .footer-grid{
-    grid-template-columns:1fr;
-  }
+  .footer-grid{grid-template-columns:1fr;}
 }
 
 @media(prefers-reduced-motion:reduce){
-  html{
-    scroll-behavior:auto;
-  }
 
-  .card{
-    transition:none;
-  }
+  html{scroll-behavior:auto;}
+
+  .card{transition:none;}
 }
 </style>
 </head>
@@ -762,6 +707,7 @@ footer{
     <nav aria-label="Primary navigation">
       <a href="#witness">Witness</a>
       <a href="#archive">Archive</a>
+      <a href="#three-sites">Three Sites</a>
       <a href="#evidence">Evidence</a>
       <a href="#timeline">Timeline</a>
       <a href="#gospels">Gospels</a>
@@ -775,14 +721,10 @@ footer{
 
 <main>
 
-<!-- HERO -->
-
 <section class="hero" id="top">
   <div class="container hero-content">
 
-    <div class="kicker">
-      The Church of Barran Dodger
-    </div>
+    <div class="kicker">The Church of Barran Dodger</div>
 
     <h1>
       THE WITNESS<br>
@@ -814,8 +756,6 @@ footer{
 </section>
 
 
-<!-- WITNESS -->
-
 <section id="witness">
   <div class="container">
 
@@ -836,12 +776,8 @@ footer{
     </div>
 
     <div class="statement">
-      <p>
-        “They could not erase what God preserved.”
-      </p>
-      <small>
-        FAITH / SPIRITUAL INTERPRETATION — AUTHOR'S TESTIMONY
-      </small>
+      <p>“They could not erase what God preserved.”</p>
+      <small>FAITH / SPIRITUAL INTERPRETATION — AUTHOR'S TESTIMONY</small>
     </div>
 
     <p class="intro">
@@ -854,8 +790,6 @@ footer{
   </div>
 </section>
 
-
-<!-- ARCHIVE -->
 
 <section id="archive">
   <div class="container">
@@ -876,12 +810,9 @@ footer{
       </div>
     </div>
 
-
     <div class="search-panel">
 
-      <label for="archiveSearch" class="label">
-        Search this catalogue
-      </label>
+      <label for="archiveSearch" class="label">Search this catalogue</label>
 
       <div class="search-row">
         <input
@@ -899,7 +830,6 @@ footer{
       </div>
 
     </div>
-
 
     <div class="archive-grid" id="archiveGrid">
 
@@ -1084,13 +1014,126 @@ footer{
 </section>
 
 
-<!-- EVIDENCE -->
+<!-- THREE SITES -->
+
+<section id="three-sites">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="section-number">03 — The Three-Part Project</div>
+
+      <div>
+        <h2 class="section-title">
+          THREE SITES.<br>
+          ONE RECORD.<br>
+          DISTINCT ROLES.
+        </h2>
+
+        <p class="intro">
+          The three public websites form a connected documentary, preservation
+          and faith project. They are related, but they are not identical and
+          should not be treated as three independent confirmations of the same
+          propositions.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="cards">
+
+      <article class="card">
+        <div class="label">01 — DOCUMENTARY ARCHIVE</div>
+
+        <h3>The Witness Remains</h3>
+
+        <p>
+          The principal public documentary and research archive. It brings
+          together records, correspondence, testimony, chronology, research
+          and preserved source material for examination.
+        </p>
+
+        <a class="card-link"
+           href="https://wezzo72.github.io/Barrandodger/"
+           target="_blank"
+           rel="noopener">
+          Open Main Archive →
+        </a>
+      </article>
+
+
+      <article class="card">
+        <div class="label">02 — PRESERVATION / FINDING AID</div>
+
+        <h3>Rebuild Archive</h3>
+
+        <p>
+          A related reconstruction and preservation interface designed to
+          assist with locating, comparing and preserving material from the
+          broader documentary record.
+        </p>
+
+        <a class="card-link"
+           href="https://wezzo72.github.io/barrandodger-rebuild/"
+           target="_blank"
+           rel="noopener">
+          Open Rebuild Archive →
+        </a>
+      </article>
+
+
+      <article class="card">
+        <div class="label">03 — FAITH / MINISTRY</div>
+
+        <h3>Church of Barran Dodger</h3>
+
+        <p>
+          This website provides the spiritual, theological and ministry
+          dimension of the project, including faith writing, biblical
+          interpretation, testimony and prophetic material.
+        </p>
+
+        <a class="card-link"
+           href="https://wezzo72.github.io/-church-of-barran-dodger/"
+           target="_blank"
+           rel="noopener">
+          Church Homepage →
+        </a>
+      </article>
+
+    </div>
+
+
+    <div class="notice">
+
+      <strong>IMPARTIAL READING</strong><br><br>
+
+      The distinction between these three sites is deliberate. A government
+      document is not the same thing as an interpretation of that document.
+      Personal testimony is not automatically an official finding. An
+      allegation is not a determination of fact. A spiritual belief is not
+      presented as documentary proof. A reconstructed archive is not treated
+      as independent corroboration of the original record.<br><br>
+
+      The purpose of maintaining these distinctions is to allow readers to
+      examine source, provenance, context, corroboration, uncertainty and
+      competing explanations for themselves.<br><br>
+
+      The documentary archives preserve and organise the record. The Church
+      provides the faith and ministry context in which much of the writing was
+      created. The three sites therefore operate together while retaining
+      different evidentiary and interpretive roles.
+
+    </div>
+
+  </div>
+</section>
+
 
 <section id="evidence">
   <div class="container">
 
     <div class="section-head">
-      <div class="section-number">03 — Evidence Method</div>
+      <div class="section-number">04 — Evidence Method</div>
 
       <div>
         <h2 class="section-title">
@@ -1106,7 +1149,6 @@ footer{
         </p>
       </div>
     </div>
-
 
     <div class="method">
       <div>
@@ -1135,7 +1177,6 @@ footer{
       </div>
     </div>
 
-
     <div class="classification">
 
       <div class="class-item">
@@ -1150,9 +1191,7 @@ footer{
       <div class="class-item">
         <div class="class-letter">B</div>
         <h3>Corroborated Claim</h3>
-        <p>
-          A claim supported by multiple relevant sources.
-        </p>
+        <p>A claim supported by multiple relevant sources.</p>
       </div>
 
       <div class="class-item">
@@ -1167,17 +1206,13 @@ footer{
       <div class="class-item">
         <div class="class-letter">D</div>
         <h3>Inference / Interpretation</h3>
-        <p>
-          An interpretation drawn from available records.
-        </p>
+        <p>An interpretation drawn from available records.</p>
       </div>
 
       <div class="class-item">
         <div class="class-letter">E</div>
         <h3>Speculation</h3>
-        <p>
-          A possibility or hypothesis requiring further evidence.
-        </p>
+        <p>A possibility or hypothesis requiring further evidence.</p>
       </div>
 
       <div class="class-item">
@@ -1189,7 +1224,6 @@ footer{
       </div>
 
     </div>
-
 
     <div class="notice">
       <strong>ARCHIVE NOTICE</strong><br><br>
@@ -1206,13 +1240,11 @@ footer{
 </section>
 
 
-<!-- TIMELINE -->
-
 <section id="timeline">
   <div class="container">
 
     <div class="section-head">
-      <div class="section-number">04 — Chronology</div>
+      <div class="section-number">05 — Chronology</div>
 
       <div>
         <h2 class="section-title">
@@ -1227,7 +1259,6 @@ footer{
       </div>
     </div>
 
-
     <div class="timeline">
 
       <div class="event">
@@ -1239,7 +1270,6 @@ footer{
         </p>
       </div>
 
-
       <div class="event">
         <div class="year">2020</div>
         <h3>Doctoral Research</h3>
@@ -1249,7 +1279,6 @@ footer{
         </p>
       </div>
 
-
       <div class="event">
         <div class="year">2026</div>
         <h3>Declaration of Sovereign Vindication</h3>
@@ -1258,7 +1287,6 @@ footer{
           author's published body of writing.
         </p>
       </div>
-
 
       <div class="event">
         <div class="year">2026</div>
@@ -1282,13 +1310,11 @@ footer{
 </section>
 
 
-<!-- GOSPELS -->
-
 <section class="faith" id="gospels">
   <div class="container">
 
     <div class="section-head">
-      <div class="section-number">05 — Faith / Spiritual Writing</div>
+      <div class="section-number">06 — Faith / Spiritual Writing</div>
 
       <div>
         <h2 class="section-title">
@@ -1303,7 +1329,6 @@ footer{
         </p>
       </div>
     </div>
-
 
     <div class="cards">
 
@@ -1323,7 +1348,6 @@ footer{
         </a>
       </article>
 
-
       <article class="card">
         <div class="label">Gospel</div>
         <h3>The Gospel of Barran Dodger</h3>
@@ -1342,33 +1366,23 @@ footer{
 
     </div>
 
-
     <div class="scripture">
-      <p>
-        “For nothing is secret, that shall not be made manifest.”
-      </p>
-
-      <small>
-        LUKE 8:17 — SCRIPTURE REFERENCE
-      </small>
+      <p>“For nothing is secret, that shall not be made manifest.”</p>
+      <small>LUKE 8:17 — SCRIPTURE REFERENCE</small>
     </div>
 
   </div>
 </section>
 
 
-<!-- PROPHECY -->
-
 <section class="faith" id="prophecy">
   <div class="container">
 
     <div class="section-head">
-      <div class="section-number">06 — Faith / Spiritual Writing</div>
+      <div class="section-number">07 — Faith / Spiritual Writing</div>
 
       <div>
-        <h2 class="section-title">
-          PROPHECY.
-        </h2>
+        <h2 class="section-title">PROPHECY.</h2>
 
         <p class="intro">
           Prophetic and spiritual writings are preserved as authored testimony
@@ -1378,17 +1392,13 @@ footer{
       </div>
     </div>
 
-
     <div class="cards">
 
       <article class="card">
         <div class="label">Faith Interpretation</div>
         <h3>The Witness</h3>
-        <p>
-          Writing concerning testimony, survival and preservation.
-        </p>
+        <p>Writing concerning testimony, survival and preservation.</p>
       </article>
-
 
       <article class="card">
         <div class="label">Faith Interpretation</div>
@@ -1399,7 +1409,6 @@ footer{
         </p>
       </article>
 
-
       <article class="card">
         <div class="label">Faith Interpretation</div>
         <h3>The Justice Mandate</h3>
@@ -1407,7 +1416,6 @@ footer{
           A faith-based call toward truth, accountability, mercy and justice.
         </p>
       </article>
-
 
       <article class="card">
         <div class="label">Faith Interpretation</div>
@@ -1424,13 +1432,11 @@ footer{
 </section>
 
 
-<!-- WORKS -->
-
 <section id="works">
   <div class="container">
 
     <div class="section-head">
-      <div class="section-number">07 — Books & Writing</div>
+      <div class="section-number">08 — Books & Writing</div>
 
       <div>
         <h2 class="section-title">
@@ -1445,40 +1451,29 @@ footer{
       </div>
     </div>
 
-
     <div class="cards">
 
       <article class="card">
         <div class="label">Book · 2002</div>
         <h3>Recovered, Not Cured</h3>
-        <p>
-          <em>A Journey Through Schizophrenia</em>.
-        </p>
-
+        <p><em>A Journey Through Schizophrenia</em>.</p>
         <a class="card-link"
            href="https://wezzo72.github.io/Barrandodger/"
-           target="_blank"
-           rel="noopener">
+           target="_blank" rel="noopener">
           Archive Source →
         </a>
       </article>
-
 
       <article class="card">
         <div class="label">Work</div>
         <h3>Betrayed, Murdered, Forsaken</h3>
-        <p>
-          A major work preserved within the author's body of writing.
-        </p>
-
+        <p>A major work preserved within the author's body of writing.</p>
         <a class="card-link"
            href="https://wezzo72.github.io/Barrandodger/"
-           target="_blank"
-           rel="noopener">
+           target="_blank" rel="noopener">
           Archive Source →
         </a>
       </article>
-
 
       <article class="card">
         <div class="label">Declaration · 2026</div>
@@ -1487,15 +1482,12 @@ footer{
           Documentary and philosophical writing associated with the author's
           later work.
         </p>
-
         <a class="card-link"
            href="https://wezzo72.github.io/Barrandodger/"
-           target="_blank"
-           rel="noopener">
+           target="_blank" rel="noopener">
           Archive Source →
         </a>
       </article>
-
 
       <article class="card">
         <div class="label">Research / Writing</div>
@@ -1504,27 +1496,20 @@ footer{
           Writing concerning administration, systems, records and
           accountability.
         </p>
-
         <a class="card-link"
            href="https://wezzo72.github.io/Barrandodger/"
-           target="_blank"
-           rel="noopener">
+           target="_blank" rel="noopener">
           Archive Source →
         </a>
       </article>
 
-
       <article class="card">
         <div class="label">Faith / Spiritual Writing</div>
         <h3>They Could Not Erase What God Preserved</h3>
-        <p>
-          A faith-based interpretation of survival and preservation.
-        </p>
-
+        <p>A faith-based interpretation of survival and preservation.</p>
         <a class="card-link"
            href="https://wezzo72.github.io/Barrandodger/"
-           target="_blank"
-           rel="noopener">
+           target="_blank" rel="noopener">
           Archive Source →
         </a>
       </article>
@@ -1535,13 +1520,11 @@ footer{
 </section>
 
 
-<!-- JUSTICE -->
-
 <section id="justice">
   <div class="container">
 
     <div class="section-head">
-      <div class="section-number">08 — Justice Mandate</div>
+      <div class="section-number">09 — Justice Mandate</div>
 
       <div>
         <h2 class="section-title">
@@ -1559,45 +1542,32 @@ footer{
       </div>
     </div>
 
-
     <div class="statement">
       <p>
         “A person should not be reduced to the worst thing written about them.”
       </p>
-      <small>
-        PRINCIPLE OF HUMAN DIGNITY
-      </small>
+      <small>PRINCIPLE OF HUMAN DIGNITY</small>
     </div>
-
 
     <div class="cards">
 
       <article class="card">
         <div class="label">Principle</div>
         <h3>Preserve</h3>
-        <p>
-          Preserve original records and provenance before interpretation.
-        </p>
+        <p>Preserve original records and provenance before interpretation.</p>
       </article>
-
 
       <article class="card">
         <div class="label">Principle</div>
         <h3>Question</h3>
-        <p>
-          Distinguish evidence from assumption, allegation and inference.
-        </p>
+        <p>Distinguish evidence from assumption, allegation and inference.</p>
       </article>
-
 
       <article class="card">
         <div class="label">Principle</div>
         <h3>Examine</h3>
-        <p>
-          Compare records, responses, chronology and documentary context.
-        </p>
+        <p>Compare records, responses, chronology and documentary context.</p>
       </article>
-
 
       <article class="card">
         <div class="label">Principle</div>
@@ -1614,13 +1584,11 @@ footer{
 </section>
 
 
-<!-- SOURCE -->
-
 <section id="sources">
   <div class="container">
 
     <div class="section-head">
-      <div class="section-number">09 — Source Integrity</div>
+      <div class="section-number">10 — Source Integrity</div>
 
       <div>
         <h2 class="section-title">
@@ -1636,38 +1604,30 @@ footer{
       </div>
     </div>
 
-
     <div class="source-box">
 
       <div class="label">MAIN ARCHIVE</div>
-
-      <code>
-https://wezzo72.github.io/Barrandodger/
-      </code>
+      <code>https://wezzo72.github.io/Barrandodger/</code>
 
       <br>
 
       <div class="label">REBUILD ARCHIVE</div>
+      <code>https://wezzo72.github.io/barrandodger-rebuild/</code>
 
-      <code>
-https://wezzo72.github.io/barrandodger-rebuild/
-      </code>
+      <br>
+
+      <div class="label">CHURCH OF BARRAN DODGER</div>
+      <code>https://wezzo72.github.io/-church-of-barran-dodger/</code>
 
       <br>
 
       <div class="label">GITHUB — DR BARRAN DODGER</div>
-
-      <code>
-https://github.com/drbarrandodger
-      </code>
+      <code>https://github.com/drbarrandodger</code>
 
       <br>
 
       <div class="label">GITHUB — WEZZO72</div>
-
-      <code>
-https://github.com/wezzo72
-      </code>
+      <code>https://github.com/wezzo72</code>
 
     </div>
 
@@ -1675,13 +1635,11 @@ https://github.com/wezzo72
 </section>
 
 
-<!-- ABOUT -->
-
 <section id="about">
   <div class="container">
 
     <div class="section-head">
-      <div class="section-number">10 — About</div>
+      <div class="section-number">11 — About</div>
 
       <div>
         <h2 class="section-title">
@@ -1707,13 +1665,11 @@ https://github.com/wezzo72
 </section>
 
 
-<!-- HOPE -->
-
 <section id="hope">
   <div class="container">
 
     <div class="section-head">
-      <div class="section-number">11 — Hope</div>
+      <div class="section-number">12 — Hope</div>
 
       <div>
         <h2 class="section-title">
@@ -1728,42 +1684,30 @@ https://github.com/wezzo72
       </div>
     </div>
 
-
     <div class="cards">
 
       <article class="card">
         <div class="label">01</div>
         <h3>Document</h3>
-        <p>
-          Preserve what happened as accurately as possible.
-        </p>
+        <p>Preserve what happened as accurately as possible.</p>
       </article>
-
 
       <article class="card">
         <div class="label">02</div>
         <h3>Question</h3>
-        <p>
-          Distinguish evidence from assumption.
-        </p>
+        <p>Distinguish evidence from assumption.</p>
       </article>
-
 
       <article class="card">
         <div class="label">03</div>
         <h3>Create</h3>
-        <p>
-          Turn experience into writing, art, research and meaning.
-        </p>
+        <p>Turn experience into writing, art, research and meaning.</p>
       </article>
-
 
       <article class="card">
         <div class="label">04</div>
         <h3>Hope</h3>
-        <p>
-          Keep open the possibility of truth, justice, restoration and love.
-        </p>
+        <p>Keep open the possibility of truth, justice, restoration and love.</p>
       </article>
 
     </div>
@@ -1781,13 +1725,9 @@ https://github.com/wezzo72
     <div class="footer-grid">
 
       <div>
-        <div class="footer-title">
-          THE WITNESS REMAINS
-        </div>
+        <div class="footer-title">THE WITNESS REMAINS</div>
 
-        <p>
-          THE CHURCH OF BARRAN DODGER
-        </p>
+        <p>THE CHURCH OF BARRAN DODGER</p>
 
         <p>
           Preservation first.<br>
@@ -1801,6 +1741,7 @@ https://github.com/wezzo72
         <div class="footer-title">ARCHIVES</div>
 
         <div class="footer-links">
+
           <a href="https://wezzo72.github.io/Barrandodger/"
              target="_blank" rel="noopener">
             Main Archive
@@ -1810,6 +1751,12 @@ https://github.com/wezzo72
              target="_blank" rel="noopener">
             Rebuild Archive
           </a>
+
+          <a href="https://wezzo72.github.io/-church-of-barran-dodger/"
+             target="_blank" rel="noopener">
+            Church of Barran Dodger
+          </a>
+
         </div>
       </div>
 
@@ -1818,6 +1765,7 @@ https://github.com/wezzo72
         <div class="footer-title">SOURCE</div>
 
         <div class="footer-links">
+
           <a href="https://github.com/drbarrandodger"
              target="_blank" rel="noopener">
             Dr Barran Dodger
@@ -1827,6 +1775,7 @@ https://github.com/wezzo72
              target="_blank" rel="noopener">
             Wezzo72
           </a>
+
         </div>
       </div>
 
@@ -1848,17 +1797,12 @@ https://github.com/wezzo72
 
 <script>
 
-/*
-  STATIC ARCHIVE SEARCH
-
-  This searches the catalogue entries actually present on this page.
-  It does NOT pretend to be a live search of the entire GitHub archive.
-*/
-
 const searchInput = document.getElementById("archiveSearch");
+
 const archiveItems = Array.from(
   document.querySelectorAll(".archive-item")
 );
+
 const searchCount = document.getElementById("searchCount");
 
 function updateSearch(){
