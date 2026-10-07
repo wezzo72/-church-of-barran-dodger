@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Witness Remains — Timeline and Chronology">
+<title>Timeline — The Witness Remains</title>
+
+<style>
+:root{
+  --black:#080808;
+  --ink:#111;
+  --paper:#eee7d8;
+  --paper2:#d8cfbd;
+  --gold:#b99a58;
+  --gold2:#d1b675;
+  --muted:#aaa18f;
+  --line:rgba(185,154,88,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--black);
+  color:var(--paper);
+  font-family:Georgia,"Times New Roman",serif;
+  line-height:1.7;
+}
+a{color:var(--gold2);text-decoration:none}
+a:hover{text-decoration:underline}
+nav{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(8,8,8,.96);
+  border-bottom:1px solid var(--line);
+  padding:14px 5%;
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  font-family:Arial,sans-serif;
+  font-size:.78rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+nav a{color:#d8cfbd}
+.container{max-width:1100px;margin:auto;padding:0 5%}
+.hero{
+  padding:100px 5% 80px;
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(circle at 80% 20%,rgba(185,154,88,.10),transparent 30%),
+    linear-gradient(180deg,#0d0d0d,#080808);
+}
+.kicker{
+  color:var(--gold2);
+  font-family:Arial,sans-serif;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  font-size:.75rem;
+}
+h1{
+  font-size:clamp(3rem,9vw,7rem);
+  line-height:.95;
+  margin:18px 0;
+  font-weight:normal;
+}
+.subtitle{
+  max-width:760px;
+  font-size:1.25rem;
+  color:var(--paper2);
+}
+section{padding:70px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+h2{
+  font-size:2.1rem;
+  font-weight:normal;
+  margin-top:0;
+}
+h3{
+  font-size:1.25rem;
+  color:var(--gold2);
+}
+.lead{font-size:1.12rem;max-width:850px}
+.notice{
+  border-left:3px solid var(--gold);
+  background:#111;
+  padding:24px 28px;
+  margin:30px 0;
+}
+.timeline{
+  position:relative;
+  margin:45px 0;
+  padding-left:35px;
+  border-left:1px solid var(--gold);
+}
+.event{
+  position:relative;
+  margin:0 0 55px;
+  padding:0 0 0 28px;
+}
+.event:before{
+  content:"";
+  position:absolute;
+  left:-41px;
+  top:8px;
+  width:13px;
+  height:13px;
+  border:2px solid var(--gold);
+  background:var(--black);
+  border-radius:50%;
+}
+.year{
+  color:var(--gold2);
+  font-family:Arial,sans-serif;
+  font-size:.78rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+.event h3{margin:6px 0 8px}
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:18px;
+  margin-top:30px;
+}
+.card{
+  border:1px solid var(--line);
+  padding:25px;
+  background:linear-gradient(145deg,#121212,#0b0b0b);
+}
+.card strong{
+  display:block;
+  color:var(--gold2);
+  margin-bottom:8px;
+}
+.method{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:10px;
+  margin-top:30px;
+}
+.step{
+  border:1px solid var(--line);
+  padding:18px;
+  text-align:center;
+  font-family:Arial,sans-serif;
+  font-size:.78rem;
+  letter-spacing:.08em;
+}
+footer{
+  padding:55px 5%;
+  text-align:center;
+  color:var(--muted);
+  font-size:.9rem;
+}
+.small{
+  color:var(--muted);
+  font-size:.88rem;
+}
+@media(max-width:650px){
+  nav{gap:10px;padding:12px 4%}
+  .hero{padding:70px 5% 55px}
+  section{padding:50px 0}
+  .timeline{padding-left:20px}
+  .event{padding-left:20px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="archive.html">Archive</a>
+  <a href="evidence.html">Evidence</a>
+  <a href="government-documents.html">Government</a>
+  <a href="legal.html">Legal</a>
+  <a href="forensics.html">Forensics</a>
+  <a href="timeline.html">Timeline</a>
+  <a href="testimony.html">Testimony</a>
+  <a href="writings.html">Writings</a>
+  <a href="justice.html">Justice</a>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="kicker">The Witness Remains · Chronology</div>
+    <h1>TIMELINE</h1>
+    <p class="subtitle">
+      A chronological finding aid for the life, work, writings and documentary
+      record preserved within the archive.
+    </p>
+  </div>
+</header>
+
+<main class="container">
+
+<section>
+  <h2>Why a Timeline?</h2>
+
+  <p class="lead">
+    A timeline places documents, writings, experiences and public events into
+    chronological context. It helps a reader move from isolated records toward
+    a documented sequence.
+  </p>
+
+  <div class="notice">
+    <strong>PRESERVE FIRST. EXAMINE SECOND. CONCLUDE LAST.</strong>
+    <p>
+      This chronology is a finding aid. It is not presented as a definitive
+      history of every event in the author's life, nor does inclusion of an
+      event establish that every interpretation attached to it is true.
+    </p>
+  </div>
+
+  <p>
+    Dates and descriptions should therefore be read together with their
+    underlying source material. Where a date, event or interpretation remains
+    uncertain, that uncertainty should remain visible.
+  </p>
+</section>
+
+<section>
+  <h2>Documentary Timeline</h2>
+
+  <div class="timeline">
+
+    <article class="event">
+      <div class="year">2002</div>
+      <h3><em>Recovered, Not Cured: A Journey Through Schizophrenia</em></h3>
+      <p>
+        Publication of the author's book
+        <em>Recovered, Not Cured: A Journey Through Schizophrenia</em>.
+        The work forms part of the author's published writing and advocacy
+        history and is preserved as an important point in the chronology.
+      </p>
+      <p class="small">
+        Status: documented publication year in the archive's stated chronology.
+      </p>
+    </article>
+
+    <article class="event">
+      <div class="year">2020</div>
+      <h3>Victoria University Doctoral Research</h3>
+      <p>
+        Completion of doctoral research at Victoria University concerning the
+        ethics of artificial intelligence and posthumanism, framed through
+        global catastrophic risks and the end-stage Anthropocene, and examined
+        through young people's ethical opinions.
+      </p>
+      <p class="small">
+        Status: documented academic milestone. Consult the underlying academic
+        record for the authoritative wording and details.
+      </p>
+    </article>
+
+    <article class="event">
+      <div class="year">6 June 2026</div>
+      <h3><em>Declaration of Sovereign Vindication</em></h3>
+      <p>
+        The author's declaration titled
+        <em>Declaration of Sovereign Vindication</em> is dated
+        6 June 2026 and forms part of the later body of writings preserved
+        within the archive.
+      </p>
+      <p class="small">
+        Status: documented date of the author's work.
+      </p>
+    </article>
+
+    <article class="event">
+      <div class="year">2026</div>
+      <h3>The Witness Remains</h3>
+      <p>
+        The documentary archive and associated public presentation develop into
+        <strong>The Witness Remains</strong> — a public documentary and
+        first-person research archive bringing together testimony, government
+        records, legal and administrative material, evidence, preservation
+        records and writings.
+      </p>
+      <p class="small">
+        Status: archive/project chronology.
+      </p>
+    </article>
+
+    <article class="event">
+      <div class="year">Tuesday · 6 October 2026</div>
+      <h3>Public Archive Launch</h3>
+      <p>
+        The Witness Remains is identified by the author as launched publicly on
+        Tuesday, 6 October 2026.
+      </p>
+      <p class="small">
+        Status: project-reported launch date; consult the public archive for
+        the underlying publication record.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<section>
+  <h2>How to Read the Chronology</h2>
+
+  <p>
+    A date can establish when a document was created, published, received,
+    filed or otherwise recorded. It does not automatically establish the truth
+    of every statement contained within that document.
+  </p>
+
+  <div class="card-grid">
+
+    <div class="card">
+      <strong>DOCUMENTED DATE</strong>
+      A date supported by an identifiable documentary or official record.
+    </div>
+
+    <div class="card">
+      <strong>AUTHOR ACCOUNT</strong>
+      A date or event reported in the author's testimony or writing.
+    </div>
+
+    <div class="card">
+      <strong>CORROBORATED</strong>
+      An account supported by additional identifiable material.
+    </div>
+
+    <div class="card">
+      <strong>DISPUTED / UNRESOLVED</strong>
+      A matter for which competing accounts, uncertainty or insufficient
+      documentary material remains.
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>The Chronological Method</h2>
+
+  <p>
+    Each significant timeline entry should ultimately be capable of being
+    followed back to its documentary source.
+  </p>
+
+  <div class="method">
+    <div class="step">EVENT</div>
+    <div class="step">DATE</div>
+    <div class="step">SOURCE</div>
+    <div class="step">DOCUMENT</div>
+    <div class="step">RESPONSE</div>
+    <div class="step">OUTCOME</div>
+    <div class="step">STATUS</div>
+  </div>
+
+  <div class="notice">
+    <strong>THE FILENAME IS NOT ITSELF A FINDING.</strong>
+    <p>
+      A document's name, location or appearance in the archive should not be
+      treated as proof of the proposition it contains. The underlying record,
+      provenance and surrounding evidence must be examined.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Chronology and the Wider Archive</h2>
+
+  <p>
+    The timeline is only one layer of the documentary record. Individual
+    events should be read alongside government documents, legal records,
+    forensic material, testimony, correspondence and preservation data where
+    those sources exist.
+  </p>
+
+  <div class="card-grid">
+
+    <div class="card">
+      <strong>ARCHIVE</strong>
+      <p>
+        Browse the wider documentary catalogue and finding aid.
+      </p>
+      <a href="archive.html">Open the Archive →</a>
+    </div>
+
+    <div class="card">
+      <strong>EVIDENCE</strong>
+      <p>
+        Review the classification and preservation methodology.
+      </p>
+      <a href="evidence.html">Examine Evidence →</a>
+    </div>
+
+    <div class="card">
+      <strong>GOVERNMENT RECORDS</strong>
+      <p>
+        Follow the official-record and correspondence material.
+      </p>
+      <a href="government-documents.html">Government Documents →</a>
+    </div>
+
+    <div class="card">
+      <strong>LEGAL RECORD</strong>
+      <p>
+        Review legal and administrative documentation separately from
+        interpretation.
+      </p>
+      <a href="legal.html">Legal Record →</a>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Primary Public Archives</h2>
+
+  <p>
+    The chronology should be read against the underlying public archives rather
+    than treated as a substitute for them.
+  </p>
+
+  <p>
+    <a href="https://wezzo72.github.io/Barrandodger/" target="_blank"
+       rel="noopener noreferrer">
+      Main Archive — The Witness Remains
+    </a>
+  </p>
+
+  <p>
+    <a href="https://wezzo72.github.io/barrandodger-rebuild/" target="_blank"
+       rel="noopener noreferrer">
+      Rebuild Archive — Finding Aid
+    </a>
+  </p>
+
+  <p>
+    <a href="https://github.com/drbarrandodger" target="_blank"
+       rel="noopener noreferrer">
+      GitHub — Dr Barran Dodger
+    </a>
+  </p>
+
+  <p>
+    <a href="https://github.com/wezzo72" target="_blank"
+       rel="noopener noreferrer">
+      GitHub — Wezzo72
+    </a>
+  </p>
+</section>
+
+<section>
+  <h2>A Note on Conclusions</h2>
+
+  <p class="lead">
+    The purpose of chronology is not to manufacture a conclusion from
+    proximity of dates.
+  </p>
+
+  <p>
+    Events appearing near one another in time may be connected, unrelated,
+    disputed or only apparently connected. The archive therefore separates
+    chronology from interpretation and interpretation from conclusion.
+  </p>
+
+  <div class="notice">
+    <strong>NOT A COURT. NOT A VERDICT.</strong>
+    <p>
+      This archive does not determine criminal guilt, establish liability,
+      replace legal advice or independently establish every claim made within
+      the material. Readers should examine the underlying records and the
+      status assigned to each proposition.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p><strong>THE WITNESS REMAINS — DR BARRAN DODGER</strong></p>
+  <p>
+    A public documentary archive of testimony, records, preservation,
+    accountability and hope.
+  </p>
+  <p>
+    PRESERVE FIRST · EXAMINE SECOND · CONCLUDE LAST
+  </p>
+</footer>
+
+</body>
+</html>
