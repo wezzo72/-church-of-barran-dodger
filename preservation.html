@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRESERVATION — The Witness Remains</title>
+<meta name="description" content="Preservation methodology for The Witness Remains — Dr Barran Dodger.">
+<style>
+:root{
+  --bg:#090909;
+  --panel:#11100e;
+  --paper:#e8dfcc;
+  --muted:#aaa08d;
+  --gold:#c7a96b;
+  --line:#302b22;
+  --white:#f4efe5;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--paper);
+  font-family:Georgia,"Times New Roman",serif;
+  line-height:1.7;
+}
+nav{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(9,9,9,.96);
+  border-bottom:1px solid var(--line);
+  padding:14px 5%;
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  font-family:Arial,sans-serif;
+  font-size:.78rem;
+  letter-spacing:.08em;
+}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--gold)}
+.hero{
+  padding:90px 7% 70px;
+  max-width:1200px;
+  margin:auto;
+}
+.kicker{
+  color:var(--gold);
+  font-family:Arial,sans-serif;
+  letter-spacing:.2em;
+  font-size:.75rem;
+  text-transform:uppercase;
+}
+h1{
+  font-size:clamp(3rem,9vw,7rem);
+  line-height:.92;
+  margin:20px 0;
+  color:var(--white);
+  font-weight:400;
+}
+h2{
+  color:var(--white);
+  font-size:2rem;
+  font-weight:400;
+  margin-top:0;
+}
+h3{color:var(--gold);font-weight:400}
+.lead{
+  max-width:850px;
+  font-size:1.3rem;
+  color:#d4c9b5;
+}
+.container{
+  max-width:1050px;
+  margin:auto;
+  padding:0 7% 80px;
+}
+section{
+  border-top:1px solid var(--line);
+  padding:60px 0;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:18px;
+}
+.card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  padding:26px;
+}
+.card p{color:var(--muted)}
+.stamp{
+  border:1px solid var(--gold);
+  padding:22px;
+  text-align:center;
+  color:var(--gold);
+  letter-spacing:.12em;
+  font-family:Arial,sans-serif;
+  font-size:.8rem;
+}
+.chain{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:25px 0;
+}
+.chain span{
+  border:1px solid var(--line);
+  padding:10px 14px;
+  background:#0d0c0a;
+  color:#d8ccb7;
+}
+.note{
+  border-left:3px solid var(--gold);
+  padding:18px 22px;
+  background:#100f0c;
+  color:#cfc4b0;
+}
+a{color:var(--gold)}
+footer{
+  border-top:1px solid var(--line);
+  padding:45px 7%;
+  color:#817969;
+  font-family:Arial,sans-serif;
+  font-size:.8rem;
+}
+.small{
+  color:#817969;
+  font-family:Arial,sans-serif;
+  font-size:.8rem;
+}
+@media(max-width:600px){
+  .hero{padding-top:60px}
+  h1{font-size:3.6rem}
+  .lead{font-size:1.1rem}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">THE WITNESS REMAINS</a>
+<a href="archive.html">ARCHIVE</a>
+<a href="evidence.html">EVIDENCE</a>
+<a href="government-documents.html">GOVERNMENT</a>
+<a href="legal.html">LEGAL</a>
+<a href="forensics.html">FORENSICS</a>
+<a href="preservation.html">PRESERVATION</a>
+<a href="timeline.html">TIMELINE</a>
+<a href="testimony.html">TESTIMONY</a>
+<a href="justice.html">JUSTICE</a>
+<a href="hope.html">HOPE</a>
+</nav>
+
+<header class="hero">
+<div class="kicker">The Witness Remains · Documentary Archive</div>
+<h1>PRESERVATION</h1>
+<p class="lead">
+A record preserved so that it can be examined without relying upon memory alone.
+</p>
+<p class="small">
+PRESERVE FIRST. EXAMINE SECOND. CONCLUDE LAST.
+</p>
+</header>
+
+<main class="container">
+
+<section>
+<h2>1. Why Preservation Matters</h2>
+<p>
+The purpose of preservation is simple: to prevent the documentary record from disappearing,
+being silently altered, becoming detached from its source, or being reduced to an unsupported
+summary of what someone remembers.
+</p>
+<p>
+The archive therefore treats preservation as a discipline in its own right. The underlying
+record comes before the interpretation of the record.
+</p>
+
+<div class="stamp">
+PRESERVATION IS NOT PROOF<br>
+PRESERVATION MAKES EXAMINATION POSSIBLE
+</div>
+</section>
+
+<section>
+<h2>2. What Is Being Preserved</h2>
+
+<div class="grid">
+<div class="card">
+<h3>Primary Documents</h3>
+<p>Government correspondence, official records, legal and administrative material, reports, statements and other source documents.</p>
+</div>
+
+<div class="card">
+<h3>Communications</h3>
+<p>Messages, emails, correspondence, recordings, transcripts, call records and related documentary material.</p>
+</div>
+
+<div class="card">
+<h3>Writings</h3>
+<p>Books, essays, statements, research, testimony, spiritual writing, prophecy, poetry and other authored material.</p>
+</div>
+
+<div class="card">
+<h3>Digital Records</h3>
+<p>Files, filenames, paths, repositories, commits, hashes, timestamps and other available provenance information.</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>3. The Preservation Chain</h2>
+
+<p>
+Where the necessary information exists, the archive seeks to retain a documentary chain from
+the originating material to the public preservation copy.
+</p>
+
+<div class="chain">
+<span>ORIGINAL SOURCE</span>
+<span>→</span>
+<span>FILE</span>
+<span>→</span>
+<span>HASH</span>
+<span>→</span>
+<span>TIMESTAMP</span>
+<span>→</span>
+<span>REPOSITORY</span>
+<span>→</span>
+<span>COMMIT</span>
+<span>→</span>
+<span>PUBLIC ARCHIVE</span>
+</div>
+
+<p>
+Not every record contains every element of this chain. Missing provenance is identified rather
+than invented.
+</p>
+</section>
+
+<section>
+<h2>4. SHA-256 and Digital Integrity</h2>
+
+<p>
+A SHA-256 hash can provide a digital fingerprint of a file. If the file changes, its hash will
+normally change. This can therefore assist with demonstrating that a particular digital object
+has remained unchanged since a particular hashing event.
+</p>
+
+<div class="note">
+<strong>Important distinction:</strong> a hash can help establish digital identity or integrity.
+It does not establish that the contents of a document are true, that an allegation occurred,
+that a person is responsible, or that a legal conclusion follows.
+</div>
+</section>
+
+<section>
+<h2>5. Blockchain and Timestamp Records</h2>
+
+<p>
+Where records have been anchored through blockchain or timestamp systems, those mechanisms may
+provide an additional layer of preservation and provenance.
+</p>
+
+<p>
+The archive does not treat blockchain anchoring as a substitute for examination of the underlying
+document.
+</p>
+
+<div class="grid">
+<div class="card">
+<h3>What It May Support</h3>
+<p>Existence of a digital object at or before a recorded point in time, depending on the system and evidence available.</p>
+</div>
+
+<div class="card">
+<h3>What It Does Not Prove</h3>
+<p>The substantive truth of every statement contained within the preserved object.</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>6. Provenance</h2>
+
+<p>
+Provenance asks where a document came from and how it reached the archive.
+Where available, the archive seeks to preserve information such as:
+</p>
+
+<div class="grid">
+<div class="card"><h3>Source</h3><p>Originating organisation, person, system or repository.</p></div>
+<div class="card"><h3>Date</h3><p>Creation, transmission, publication or other relevant date.</p></div>
+<div class="card"><h3>Identity</h3><p>Title, filename, document number or other identifying information.</p></div>
+<div class="card"><h3>Location</h3><p>Original URL, repository path or other source location where available.</p></div>
+<div class="card"><h3>Integrity</h3><p>Hash, commit, timestamp or other technical record where available.</p></div>
+<div class="card"><h3>Relationship</h3><p>Connections to related documents, events, correspondence or testimony.</p></div>
+</div>
+</section>
+
+<section>
+<h2>7. Preservation and the Public Archive</h2>
+
+<p>
+The public archive provides a finding aid through which readers can locate documentary material
+and follow links back toward the underlying public source.
+</p>
+
+<p>
+The principal public archives are:
+</p>
+
+<ul>
+<li><a href="https://wezzo72.github.io/Barrandodger/" target="_blank" rel="noopener">Main Archive — Wezzo72 / Barrandodger</a></li>
+<li><a href="https://wezzo72.github.io/barrandodger-rebuild/" target="_blank" rel="noopener">Rebuild Archive</a></li>
+<li><a href="https://github.com/drbarrandodger" target="_blank" rel="noopener">GitHub — Dr Barran Dodger</a></li>
+<li><a href="https://github.com/wezzo72" target="_blank" rel="noopener">GitHub — Wezzo72</a></li>
+</ul>
+
+<p>
+Readers should consult the underlying records rather than treating this website's summaries as
+substitutes for those records.
+</p>
+</section>
+
+<section>
+<h2>8. Preservation Copy and Reconstruction</h2>
+
+<p>
+Where an archive has been reconstructed from a preservation copy, the reconstruction should be
+understood as a finding aid rather than as a replacement for the preserved source material.
+</p>
+
+<p>
+The objective is to retain the documentary relationship between a record and its provenance,
+while making a large body of material easier for journalists, lawyers, researchers, historians,
+advocates and other readers to examine.
+</p>
+
+<div class="note">
+Underlying records should not be altered merely to make the story cleaner.
+If a filename, date, attribution, classification or provenance is uncertain, the uncertainty
+should remain visible.
+</div>
+</section>
+
+<section>
+<h2>9. Preservation Rules</h2>
+
+<div class="grid">
+<div class="card">
+<h3>1 — Preserve</h3>
+<p>Keep the source record before attempting to explain it.</p>
+</div>
+
+<div class="card">
+<h3>2 — Identify</h3>
+<p>Record what the object is, where it came from and what is known about it.</p>
+</div>
+
+<div class="card">
+<h3>3 — Distinguish</h3>
+<p>Separate source material from testimony, allegation, inference and interpretation.</p>
+</div>
+
+<div class="card">
+<h3>4 — Verify</h3>
+<p>Where verification is possible, test claims against independent records.</p>
+</div>
+
+<div class="card">
+<h3>5 — Preserve Uncertainty</h3>
+<p>Do not turn an unresolved matter into a finding merely because it appears persuasive.</p>
+</div>
+
+<div class="card">
+<h3>6 — Link Back</h3>
+<p>Where possible, give readers a path to the original public source.</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>10. Classification</h2>
+
+<p>
+The archive uses an A–E framework as a finding-aid discipline. It is not a legal evidentiary
+standard and does not determine the truth of a proposition.
+</p>
+
+<div class="grid">
+<div class="card"><h3>A — Documented Fact</h3><p>Supported directly by an authoritative or primary record, subject to its scope.</p></div>
+<div class="card"><h3>B — Corroborated Claim</h3><p>A claim supported by more than one relevant source or independent record.</p></div>
+<div class="card"><h3>C — Documented Allegation</h3><p>An allegation recorded in documentary material but not thereby established as fact.</p></div>
+<div class="card"><h3>D — Inference</h3><p>An interpretation or conclusion drawn from available material.</p></div>
+<div class="card"><h3>E — Speculation</h3><p>A possibility that lacks sufficient documentary support.</p></div>
+</div>
+</section>
+
+<section>
+<h2>11. Preservation of Testimony</h2>
+
+<p>
+Personal testimony has a legitimate place within a documentary archive. It records what a person
+says they experienced, remembered, observed or understood.
+</p>
+
+<p>
+But testimony and independently established fact are not identical categories.
+The archive therefore seeks to preserve testimony without disguising it as an official finding.
+</p>
+
+<div class="chain">
+<span>ACCOUNT</span>
+<span>→</span>
+<span>DATE</span>
+<span>→</span>
+<span>SOURCE</span>
+<span>→</span>
+<span>DOCUMENT</span>
+<span>→</span>
+<span>CORROBORATION</span>
+<span>→</span>
+<span>STATUS</span>
+</div>
+</section>
+
+<section>
+<h2>12. Preservation of Faith Writing</h2>
+
+<p>
+The archive also preserves spiritual, Gospel and prophetic writing. These materials are part of
+the author's intellectual, creative and spiritual record.
+</p>
+
+<p>
+Statements concerning God, calling, prophecy, divine purpose or spiritual meaning are presented
+as faith, testimony or interpretation unless independently established by an appropriate source.
+</p>
+
+<p>
+“They could not erase what God preserved” is retained in this archive as a statement of faith and
+spiritual interpretation, not as an independently verified supernatural finding.
+</p>
+</section>
+
+<section>
+<h2>13. Preservation First</h2>
+
+<p>
+The central principle is deliberately simple:
+</p>
+
+<div class="stamp">
+PRESERVE FIRST.<br>
+EXAMINE SECOND.<br>
+CONCLUDE LAST.
+</div>
+
+<p>
+A record does not become less important because its meaning remains unresolved. Sometimes the
+most responsible archival statement is simply:
+<strong>UNRESOLVED.</strong>
+</p>
+</section>
+
+<section>
+<h2>14. Continue Through the Archive</h2>
+
+<div class="grid">
+<div class="card">
+<h3><a href="evidence.html">Evidence</a></h3>
+<p>How claims are connected to sources, documents and status.</p>
+</div>
+
+<div class="card">
+<h3><a href="forensics.html">Forensic Record</a></h3>
+<p>Digital integrity, forensic material, hashes and blockchain preservation.</p>
+</div>
+
+<div class="card">
+<h3><a href="archive.html">Archive Catalogue</a></h3>
+<p>The broader finding aid for the documentary collection.</p>
+</div>
+
+<div class="card">
+<h3><a href="testimony.html">Testimony</a></h3>
+<p>The first-person record and its distinction from independent findings.</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>15. Boundary</h2>
+
+<p>
+This preservation page does not determine criminal guilt, civil liability, administrative
+responsibility or the truth of every allegation contained in the archive.
+</p>
+
+<p>
+It does not constitute legal advice, a judicial determination or an independent investigation.
+It is a description of the preservation methodology and documentary principles used by
+<strong>The Witness Remains</strong>.
+</p>
+
+<div class="note">
+<strong>Not a court. Not a verdict.</strong><br>
+The archive preserves the material so that appropriate readers, investigators, journalists,
+lawyers, researchers and public authorities can examine it.
+</div>
+</section>
+
+</main>
+
+<footer>
+THE WITNESS REMAINS — DR BARRAN DODGER / DR RICHARD WILLIAM MCLEAN<br><br>
+WHISTLEBLOWER · TARGETED INDIVIDUAL · POLITICAL EXILE<br>
+A PUBLIC DOCUMENTARY ARCHIVE OF TESTIMONY, RECORDS, EVIDENCE, PRESERVATION AND THE SEARCH FOR ACCOUNTABILITY
+</footer>
+
+</body>
+</html>
