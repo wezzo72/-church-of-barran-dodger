@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Witness Remains — SHA-256 Mobbing preservation record dated 30 September 2026">
+<title>SHA-256 Mobbing — The Witness Remains</title>
+
+<style>
+:root{
+  --black:#080808;
+  --paper:#eee7d8;
+  --paper2:#d8cfbd;
+  --gold:#b99a58;
+  --gold2:#d1b675;
+  --muted:#aaa18f;
+  --line:rgba(185,154,88,.35);
+  --panel:#111;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--black);
+  color:var(--paper);
+  font-family:Georgia,"Times New Roman",serif;
+  line-height:1.7;
+}
+a{color:var(--gold2);text-decoration:none}
+a:hover{text-decoration:underline}
+nav{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(8,8,8,.97);
+  border-bottom:1px solid var(--line);
+  padding:13px 4%;
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  font-family:Arial,sans-serif;
+  font-size:.72rem;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+}
+nav a{color:var(--paper2)}
+.container{
+  max-width:1150px;
+  margin:auto;
+  padding:0 5%;
+}
+.hero{
+  padding:100px 5% 75px;
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(circle at 80% 20%,rgba(185,154,88,.12),transparent 30%),
+    linear-gradient(180deg,#0d0d0d,#080808);
+}
+.kicker{
+  color:var(--gold2);
+  font-family:Arial,sans-serif;
+  font-size:.73rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+}
+h1{
+  font-size:clamp(3rem,8vw,7rem);
+  line-height:.9;
+  font-weight:normal;
+  margin:18px 0;
+}
+.subtitle{
+  max-width:900px;
+  font-size:1.2rem;
+  color:var(--paper2);
+}
+section{
+  padding:65px 0;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+h2{
+  font-size:2.1rem;
+  line-height:1.15;
+  font-weight:normal;
+}
+h3{
+  color:var(--gold2);
+  font-weight:normal;
+}
+.notice{
+  background:var(--panel);
+  border-left:3px solid var(--gold);
+  padding:25px 28px;
+  margin:30px 0;
+}
+.notice strong{
+  color:var(--gold2);
+  font-family:Arial,sans-serif;
+  letter-spacing:.08em;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:18px;
+  margin:30px 0;
+}
+.card{
+  background:#0e0e0e;
+  border:1px solid var(--line);
+  padding:24px;
+}
+.label{
+  color:var(--gold2);
+  font-family:Arial,sans-serif;
+  font-size:.69rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.record{
+  background:#0d0d0d;
+  border:1px solid var(--line);
+  margin:22px 0;
+  padding:26px;
+}
+.record-head{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  flex-wrap:wrap;
+  border-bottom:1px solid rgba(185,154,88,.2);
+  padding-bottom:15px;
+  margin-bottom:18px;
+}
+.status{
+  color:var(--gold2);
+  font-family:Arial,sans-serif;
+  font-size:.68rem;
+  letter-spacing:.07em;
+}
+.chain{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:30px 0;
+}
+.chain span{
+  border:1px solid var(--line);
+  padding:12px 15px;
+  background:#101010;
+  color:var(--paper2);
+}
+.hash{
+  word-break:break-all;
+  font-family:monospace;
+  background:#050505;
+  border:1px solid rgba(185,154,88,.2);
+  padding:18px;
+  color:var(--paper2);
+}
+.quote{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:32px 20px;
+  margin:35px 0;
+  text-align:center;
+  font-size:1.4rem;
+  font-style:italic;
+  color:var(--paper2);
+}
+.small{
+  color:var(--muted);
+  font-size:.86rem;
+}
+footer{
+  text-align:center;
+  padding:60px 5%;
+  color:var(--muted);
+}
+@media(max-width:650px){
+  nav{gap:9px;padding:11px 4%}
+  .hero{padding:70px 5% 55px}
+  section{padding:48px 0}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="archive.html">Archive</a>
+  <a href="opening-statement.html">Opening</a>
+  <a href="evidence.html">Evidence</a>
+  <a href="government-documents.html">Government</a>
+  <a href="legal.html">Legal</a>
+  <a href="forensics.html">Forensics</a>
+  <a href="preservation.html">Preservation</a>
+  <a href="timeline.html">Timeline</a>
+  <a href="testimony.html">Testimony</a>
+  <a href="messages.html">Messages</a>
+  <a href="calls.html">Calls</a>
+  <a href="able-point.html">Able Point</a>
+  <a href="therapy-dog.html">Therapy Dog</a>
+  <a href="sha256-mobbing.html">SHA-256</a>
+  <a href="justice-mandate.html">Justice</a>
+  <a href="writings.html">Writings</a>
+  <a href="gospels.html">Gospels</a>
+  <a href="prophecy.html">Prophecy</a>
+  <a href="hope.html">Hope</a>
+</nav>
+
+<header class="hero">
+  <div class="container">
+
+    <div class="kicker">
+      The Witness Remains · Digital Preservation Record
+    </div>
+
+    <h1>SHA-256<br>MOBBING</h1>
+
+    <p class="subtitle">
+      A preservation record identified by the author as dated
+      <strong>30 September 2026</strong>, concerning digital integrity,
+      documentary preservation and the evidentiary distinction between
+      preserving a record and proving its contents.
+    </p>
+
+  </div>
+</header>
+
+<main class="container">
+
+<section>
+
+  <h2>Purpose</h2>
+
+  <p>
+    This page records the preservation methodology associated with the
+    author's SHA-256 material dated 30 September 2026.
+  </p>
+
+  <p>
+    SHA-256 is a cryptographic hashing function. A hash can provide a
+    reproducible digital fingerprint of a particular file at a particular
+    point in time.
+  </p>
+
+  <div class="notice">
+
+    <strong>PRESERVATION IS NOT PROOF OF TRUTH</strong>
+
+    <p>
+      A matching hash can demonstrate that the same digital content was
+      preserved or reproduced. It does not, by itself, establish that the
+      contents of the file are true, that an allegation occurred, or that
+      any person committed wrongdoing.
+    </p>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2>30 September 2026 Record</h2>
+
+  <div class="record">
+
+    <div class="record-head">
+      <span class="label">PRESERVATION EVENT</span>
+      <span class="status">AUTHOR-IDENTIFIED DATE</span>
+    </div>
+
+    <h3>SHA-256 Mobbing Record</h3>
+
+    <p>
+      Date identified by the author:
+      <strong>30 September 2026</strong>
+    </p>
+
+    <p>
+      Subject: Digital preservation and SHA-256 hashing associated with
+      material described by the author as “mobbing”.
+    </p>
+
+    <p>
+      Primary source:
+      <strong>To be linked when the exact archive file and public path are
+      verified.</strong>
+    </p>
+
+    <p class="small">
+      STATUS: PRESERVATION RECORD IDENTIFIED · UNDERLYING SOURCE TO BE VERIFIED
+    </p>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2>What SHA-256 Establishes</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="label">01</div>
+      <h3>Digital Fingerprint</h3>
+      <p>
+        A SHA-256 hash represents the contents of a particular digital file.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="label">02</div>
+      <h3>Change Detection</h3>
+      <p>
+        A materially changed file will ordinarily produce a different hash.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="label">03</div>
+      <h3>Reproducibility</h3>
+      <p>
+        Anyone with the same file can calculate its hash and compare the
+        result.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="label">04</div>
+      <h3>Preservation</h3>
+      <p>
+        Hashes can contribute to a documented chain showing how digital
+        material was preserved.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2>What SHA-256 Does Not Establish</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Truth</h3>
+      <p>
+        A hash does not prove that the contents of a document are true.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Authorship</h3>
+      <p>
+        A hash alone does not prove who created or authored a document.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Intent</h3>
+      <p>
+        A hash does not establish why a document was created or what a person
+        intended.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Criminal Liability</h3>
+      <p>
+        A hash does not establish that a crime occurred or that a person is
+        legally responsible.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2>The Preservation Chain</h2>
+
+  <div class="chain">
+    <span>SOURCE</span>
+    <span>ORIGINAL FILE</span>
+    <span>SHA-256</span>
+    <span>TIMESTAMP</span>
+    <span>REPOSITORY</span>
+    <span>COMMIT</span>
+    <span>PUBLIC ARCHIVE</span>
+    <span>REPRODUCTION</span>
+  </div>
+
+  <p>
+    The strongest preservation record connects the hash to an identifiable
+    source file, date, location and repository history.
+  </p>
+
+  <p>
+    Where available, additional preservation mechanisms such as Git history,
+    OpenTimestamps or blockchain anchoring may provide additional provenance
+    information.
+  </p>
+
+</section>
+
+<section>
+
+  <h2>Hash Register</h2>
+
+  <div class="record">
+
+    <div class="record-head">
+      <span class="label">HASH ENTRY 001</span>
+      <span class="status">SOURCE NOT YET VERIFIED</span>
+    </div>
+
+    <p>
+      File name: —
+    </p>
+
+    <p>
+      File type: —
+    </p>
+
+    <p>
+      Date preserved: 30 September 2026
+    </p>
+
+    <p>
+      SHA-256:
+    </p>
+
+    <div class="hash">
+      SHA-256 VALUE TO BE INSERTED FROM PRIMARY RECORD
+    </div>
+
+    <p>
+      Repository: —
+    </p>
+
+    <p>
+      Commit: —
+    </p>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2>Evidence Classification</h2>
+
+  <div class="chain">
+    <span>A · DOCUMENTED FACT</span>
+    <span>B · CORROBORATED CLAIM</span>
+    <span>C · DOCUMENTED ALLEGATION</span>
+    <span>D · INFERENCE</span>
+    <span>E · SPECULATION</span>
+  </div>
+
+  <p>
+    The technical fact that a file possesses a particular SHA-256 hash is
+    distinct from propositions contained within that file.
+  </p>
+
+  <p>
+    For example, “this file produced this hash” is a technical preservation
+    proposition. A statement inside the file may require a completely
+    different evidentiary assessment.
+  </p>
+
+</section>
+
+<section>
+
+  <h2>“Mobbing” as an Archive Classification</h2>
+
+  <p>
+    The term “mobbing” appears here as part of the author's description of
+    material preserved on or around 30 September 2026.
+  </p>
+
+  <p>
+    Its presence as a heading or classification does not constitute an
+    independent finding that a coordinated campaign occurred, nor does it
+    establish the identity, intent or liability of any person or organisation.
+  </p>
+
+  <div class="notice">
+
+    <strong>CLAIM → SOURCE → DOCUMENT → CORROBORATION → RESPONSE → STATUS</strong>
+
+    <p>
+      Each substantive proposition should ultimately be connected to its
+      underlying evidence.
+    </p>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2>Why Preservation Matters</h2>
+
+  <p>
+    When records are disputed, preservation can allow later readers,
+    journalists, lawyers, researchers or investigators to examine the same
+    underlying material rather than relying exclusively on competing
+    recollections.
+  </p>
+
+  <p>
+    The archive therefore treats preservation as a prerequisite to meaningful
+    examination.
+  </p>
+
+  <div class="quote">
+    PRESERVE FIRST · EXAMINE SECOND · CONCLUDE LAST
+  </div>
+
+</section>
+
+<section>
+
+  <h2>Related Records</h2>
+
+  <p><a href="evidence.html">Evidence & Preservation →</a></p>
+
+  <p><a href="forensics.html">Forensic Record →</a></p>
+
+  <p><a href="archive.html">Archive Catalogue →</a></p>
+
+  <p><a href="timeline.html">Timeline →</a></p>
+
+  <p><a href="testimony.html">Testimony →</a></p>
+
+  <p><a href="messages.html">Messages →</a></p>
+
+  <p><a href="calls.html">Calls & Recordings →</a></p>
+
+  <p><a href="justice-mandate.html">Justice Mandate →</a></p>
+
+</section>
+
+<section>
+
+  <h2>Primary Archives</h2>
+
+  <p>
+    <a href="https://wezzo72.github.io/Barrandodger/"
+       target="_blank"
+       rel="noopener noreferrer">
+       Main Archive — The Witness Remains
+    </a>
+  </p>
+
+  <p>
+    <a href="https://wezzo72.github.io/barrandodger-rebuild/"
+       target="_blank"
+       rel="noopener noreferrer">
+       Rebuild Archive — Finding Aid
+    </a>
+  </p>
+
+</section>
+
+<section>
+
+  <h2>The Boundary</h2>
+
+  <div class="notice">
+
+    <strong>NOT A COURT · NOT A VERDICT</strong>
+
+    <p>
+      This page describes a digital preservation methodology and records the
+      existence of material identified by the author as the “SHA-256 Mobbing”
+      record.
+    </p>
+
+    <p>
+      It does not independently establish that mobbing occurred, that a
+      coordinated campaign existed, that particular people participated, or
+      that any criminal, civil, administrative or human-rights violation
+      occurred.
+    </p>
+
+    <p>
+      Those questions require examination of the underlying records and,
+      where appropriate, determination by an authorised independent body.
+    </p>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  <p><strong>THE WITNESS REMAINS — DR BARRAN DODGER</strong></p>
+  <p>SHA-256 MOBBING · DIGITAL PRESERVATION RECORD · 30 SEPTEMBER 2026</p>
+  <p>TRUTH · PRESERVATION · JUSTICE · DIGNITY · COURAGE · LOVE · HOPE</p>
+</footer>
+
+</body>
+</html>
