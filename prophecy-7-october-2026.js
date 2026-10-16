@@ -52,3 +52,14 @@
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", arm);
   else arm();
 })();
+
+(function () {
+  var path = location.pathname || "";
+  if (path.indexOf("/-church-of-barran-dodger/") === -1) return;
+  if (document.querySelector("script[data-bd-network-reach]")) return;
+  var s = document.createElement("script");
+  s.src = "network-reach.js?v=20261016";
+  s.defer = true;
+  s.setAttribute("data-bd-network-reach", "1");
+  document.head.appendChild(s);
+})();
