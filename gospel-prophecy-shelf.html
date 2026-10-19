@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Gospel and Prophecy Shelf — Church of Barran Dodger</title>
+<meta name="description" content="Gospel and prophetic writings of the Church of Barran Dodger, free to read and download. Optional paid editions and gifts through Stripe.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Alegreya+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--night:#0e1130;--deep:#161a45;--gold:#dcb865;--gold2:#f3dca0;--vellum:#f2ead2;--ink:#e9e6f5;--mute:#a7a9cf;--line:#2c3170;--prophecy:#8fb7ff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--night);color:var(--ink);font:18px/1.65 "Alegreya Sans",system-ui,sans-serif}
+a{color:var(--gold2)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:700;line-height:1.1;margin:0}
+.wrap{max-width:980px;margin:auto;padding:0 20px}
+nav{display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:center;padding:14px 20px;border-bottom:1px solid var(--line);background:rgba(14,17,48,.92);position:sticky;top:0;z-index:5;backdrop-filter:blur(6px)}
+nav a{text-decoration:none;color:var(--mute);font-size:.98rem}
+nav a:hover{color:var(--gold2)}
+.hero{position:relative;text-align:center;padding:96px 20px 84px;overflow:hidden;background:radial-gradient(ellipse at 50% 115%,#3a3290 0%,#161a45 45%,var(--night) 78%)}
+.hero::before{content:"";position:absolute;left:50%;bottom:-160px;width:520px;height:520px;margin-left:-260px;border-radius:50%;background:radial-gradient(circle,rgba(243,220,160,.55),rgba(220,184,101,.14) 45%,transparent 70%);animation:rise 2.6s ease-out both}
+@keyframes rise{from{opacity:0;transform:translateY(120px) scale(.7)}to{opacity:1;transform:none}}
+.hero>*{position:relative}
+.hero h1{font-size:clamp(2.6rem,8vw,5.2rem);color:var(--vellum);letter-spacing:.01em}
+.hero p.tag{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(1.2rem,3vw,1.7rem);color:var(--gold2);margin:18px auto 0;max-width:640px}
+.hero .lede{max-width:600px;margin:22px auto 30px;color:var(--ink)}
+.btn{display:inline-block;padding:12px 26px;border-radius:999px;background:var(--gold);color:#1a1636;font-weight:700;text-decoration:none;border:2px solid var(--gold);cursor:pointer;font:inherit;font-weight:700}
+.btn:hover{background:var(--gold2)}
+.btn.ghost{background:transparent;color:var(--gold2)}
+.btn.ghost:hover{background:rgba(220,184,101,.14)}
+.btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+section{padding:64px 0}
+section h2{font-size:clamp(2rem,5vw,3rem);color:var(--vellum);margin-bottom:10px}
+.sub{color:var(--mute);max-width:640px;margin:0 0 28px}
+.promise{border-left:3px solid var(--gold);background:var(--deep);padding:18px 22px;margin:0 0 8px;border-radius:0 10px 10px 0}
+.feature{background:linear-gradient(135deg,#232a78,#141745);border:1px solid var(--line);border-radius:18px;padding:34px;margin-bottom:30px}
+.feature h3{font-size:clamp(1.8rem,4vw,2.6rem);color:var(--vellum)}
+.feature p{max-width:620px;color:var(--ink)}
+.ctl{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:0 0 18px}
+.ctl input{flex:1 1 240px;padding:12px 16px;border-radius:10px;border:1px solid var(--line);background:var(--deep);color:var(--ink);font:inherit}
+.tabs{display:flex;gap:8px}
+.tabs button{padding:9px 18px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--mute);font:inherit;cursor:pointer}
+.tabs button[aria-pressed=true]{background:var(--gold);color:#1a1636;border-color:var(--gold);font-weight:700}
+.count{color:var(--mute);font-size:.95rem;margin:0 0 10px}
+.shelf{list-style:none;margin:0;padding:0}
+.row{display:grid;grid-template-columns:6px 1fr auto;gap:0 18px;align-items:center;padding:16px 18px 16px 0;border-bottom:1px solid var(--line)}
+.row .spine{align-self:stretch;border-radius:3px;background:var(--gold)}
+.row.p .spine{background:var(--prophecy)}
+.row h3{font-size:1.35rem;color:var(--vellum);font-weight:700}
+.row .meta{color:var(--mute);font-size:.92rem;margin-top:3px}
+.row .acts{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+.row .acts a{font-weight:500}
+@media(max-width:620px){.row{grid-template-columns:6px 1fr}.row .acts{grid-column:2;justify-content:flex-start;margin-top:8px}}
+.note{color:var(--mute);font-size:.95rem;margin-top:14px}
+.pay{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:10px}
+.panel{background:var(--deep);border:1px solid var(--line);border-radius:14px;padding:26px}
+.panel h3{font-size:1.7rem;color:var(--vellum);margin-bottom:6px}
+.panel ul{list-style:none;padding:0;margin:14px 0 0}
+.panel li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:11px 0;border-top:1px solid var(--line)}
+.panel li span.pr{color:var(--gold2);font-weight:700}
+.panel .btn{padding:8px 18px;font-size:.95rem}
+footer{border-top:1px solid var(--line);padding:36px 20px;text-align:center;color:var(--mute);font-size:.92rem}
+footer p{max-width:700px;margin:8px auto}
+@media(prefers-reduced-motion:reduce){.hero::before{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav aria-label="Main">
+  <a href="#library">The shelf</a>
+  <a href="#support">Support and editions</a>
+  <a href="https://wezzo72.github.io/-church-of-barran-dodger/">Church</a>
+  <a href="https://wezzo72.github.io/Barrandodger/">The Witness archive</a>
+  <a href="https://wezzo72.github.io/barrandodger-rebuild/">Rebuild</a>
+</nav>
+
+<header class="hero">
+  <h1>The witness remains.</h1>
+  <p class="tag">The word remains. The record remains. The search continues.</p>
+  <p class="lede">The gospel and prophetic writings of the Church of Barran Dodger. Every published title below is free to read and free to download.</p>
+  <div class="btns">
+    <a class="btn" href="#library">Open the shelf</a>
+    <a class="btn ghost" href="#support">Support the work</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="library">
+    <p class="promise"><strong>The record stays free.</strong> Nothing already published sits behind a payment. Paid editions are new, designed or annotated versions, and gifts are optional.</p>
+
+    <h2>Begin here</h2>
+    <p class="sub">The foundational gospel, eight pages.</p>
+    <div class="feature">
+      <h3>The Gospel of the Witness Barran Dodger</h3>
+      <p>The Return of the Light, the Mirror of Humanity, and the Divine Reckoning. Added 10 October 2026.</p>
+      <div class="btns" style="justify-content:flex-start">
+        <a class="btn" href="https://github.com/wezzo72/Barrandodger/blob/main/FOUNDATIONAL-GOSPEL-THE-WITNESS-REMAINS-10-OCTOBER-2026.pdf">Read</a>
+        <a class="btn ghost" href="https://github.com/wezzo72/Barrandodger/raw/main/FOUNDATIONAL-GOSPEL-THE-WITNESS-REMAINS-10-OCTOBER-2026.pdf" download>Download PDF</a>
+      </div>
+    </div>
+
+    <h2>Every gospel and prophetic writing</h2>
+    <p class="sub">Titles below are listed by hand and by a live scan of the public repository each time this page opens.</p>
+    <div class="ctl">
+      <input id="q" type="search" placeholder="Search titles" aria-label="Search titles">
+      <div class="tabs" role="group" aria-label="Filter">
+        <button type="button" data-f="all" aria-pressed="true">All</button>
+        <button type="button" data-f="g" aria-pressed="false">Gospel</button>
+        <button type="button" data-f="p" aria-pressed="false">Prophecy</button>
+      </div>
+    </div>
+    <p class="count" id="count" aria-live="polite">Loading the shelf…</p>
+    <ul class="shelf" id="shelf"></ul>
+    <p class="note" id="scanNote"></p>
+    <p class="note">Gold marks gospel writing. Blue marks prophecy. Prophecy is prophetic framing, not empirical fact. Faith is not a finding, and a filename is not a finding.</p>
+  </section>
+
+  <section id="support">
+    <h2>Support the work</h2>
+    <p class="sub">Gifts keep the archive online and fund new publication. They do not buy a finding and are not tax-deductible. Payment is taken by Stripe.</p>
+    <div class="pay">
+      <div class="panel">
+        <h3>Give once</h3>
+        <ul>
+          <li><span class="pr">$10 AUD</span><a class="btn" href="https://donate.stripe.com/aFa5kEgl9ayJ8bba190Ny07">Give</a></li>
+          <li><span class="pr">$40 AUD</span><a class="btn" href="https://donate.stripe.com/4gM28s2ujfT39ff2yH0Ny08">Give</a></li>
+          <li><span class="pr">$100 AUD</span><a class="btn" href="https://donate.stripe.com/9B68wQ0mb6itajjb5d0Ny09">Give</a></li>
+          <li><span class="pr">Your amount</span><a class="btn" href="https://donate.stripe.com/9B6cN64Cr5epajjc9h0Ny0a">Choose</a></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Give monthly</h3>
+        <p style="margin:0;color:var(--mute)">Cancel any time from the receipt Stripe emails you.</p>
+        <ul>
+          <li><span class="pr">$10 AUD a month</span><a class="btn" href="https://donate.stripe.com/28EfZied1eOZ9ff4GP0Ny0b">Join</a></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>New paid editions</h3>
+        <p style="margin:0;color:var(--mute)">Designed and annotated versions. The free originals stay free.</p>
+        <ul id="editions">
+          <li><span>Reader's Edition, Gospel of the Witness <span class="pr">$12</span></span><a class="btn" data-stripe href="PASTE_STRIPE_LINK_HERE">Buy</a></li>
+          <li><span>Annotated Study Edition <span class="pr">$35</span></span><a class="btn" data-stripe href="PASTE_STRIPE_LINK_HERE">Buy</a></li>
+          <li><span>Complete Library Bundle <span class="pr">$89</span></span><a class="btn" data-stripe href="PASTE_STRIPE_LINK_HERE">Buy</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p><strong>Church of Barran Dodger, ministry and publishing house.</strong></p>
+  <p>Not a court. Not a verdict. Preserve first. Examine second. Conclude last.</p>
+  <p>Faith is not a finding. A link is not a finding. Writings here are the author's testimony, belief or interpretation unless marked as documented record. Digital editions are for personal use only and may not be redistributed.</p>
+</footer>
+
+<script>
+(function(){
+var REPO="wezzo72/Barrandodger", RAW="https://github.com/"+REPO+"/raw/main/", BLOB="https://github.com/"+REPO+"/blob/main/";
+var items=[
+ {t:"The Gospel of the Witness Barran Dodger",k:"g",m:"Foundational gospel, 8 pages, 10 October 2026",v:BLOB+"FOUNDATIONAL-GOSPEL-THE-WITNESS-REMAINS-10-OCTOBER-2026.pdf",d:RAW+"FOUNDATIONAL-GOSPEL-THE-WITNESS-REMAINS-10-OCTOBER-2026.pdf"},
+ {t:"The Witness Remains: The Paradox of Survival",k:"p",m:"Prophetic narrative, 9 October 2026",v:"https://wezzo72.github.io/-church-of-barran-dodger/THE-WITNESS-REMAINS-PARADOX-OF-SURVIVAL-9-OCTOBER-2026.pdf",d:"https://wezzo72.github.io/-church-of-barran-dodger/THE-WITNESS-REMAINS-PARADOX-OF-SURVIVAL-9-OCTOBER-2026.pdf"},
+ {t:"Gospels and Prophetic Significance, 50,000-word edition",k:"p",m:"Founding literature, 9 October 2026",v:BLOB+"papers/2026-10-09-gospels-prophetic-significance-50000-words.pdf",d:RAW+"papers/2026-10-09-gospels-prophetic-significance-50000-words.pdf"},
+ {t:"Gospels and Prophetic Significance, 500,000-word edition",k:"p",m:"Founding literature, 9 October 2026",v:BLOB+"papers/2026-10-09-gospels-prophetic-significance-500000-words.pdf",d:RAW+"papers/2026-10-09-gospels-prophetic-significance-500000-words.pdf"},
+ {t:"The Gospels of Barran Dodger (123 gospels)",k:"g",m:"Collected gospels",v:BLOB+"123_gospels_barran_dodger.pdf",d:RAW+"123_gospels_barran_dodger.pdf"},
+ {t:"Church gospels index",k:"g",m:"Love Chain, the Gospel of Barran Dodger and the chain gospels",v:"https://wezzo72.github.io/-church-of-barran-dodger/gospels.html"},
+ {t:"Prophecy page",k:"p",m:"Prophecy of the Witness, 7 October 2026",v:"https://wezzo72.github.io/-church-of-barran-dodger/prophecy.html"},
+ {t:"Writings page",k:"p",m:"Including They Could Not Erase",v:"https://wezzo72.github.io/-church-of-barran-dodger/writings.html"},
+ {t:"Gospels and prophetic index",k:"g",m:"Public index on the main archive",v:"https://wezzo72.github.io/Barrandodger/gospels-prophetic.html"}
+];
+var seen={};items.forEach(function(i){seen[i.v]=1;if(i.d)seen[i.d]=1});
+var filter="all",shelf=document.getElementById("shelf"),count=document.getElementById("count"),q=document.getElementById("q");
+function clean(p){var n=p.split("/").pop().replace(/\.pdf$/i,"").replace(/[_]+/g," ").replace(/\s+/g," ").trim();return n}
+function render(){
+  var term=q.value.toLowerCase(),out=items.filter(function(i){return(filter==="all"||i.k===filter)&&(i.t+" "+i.m).toLowerCase().indexOf(term)>-1});
+  shelf.innerHTML="";
+  out.forEach(function(i){
+    var li=document.createElement("li");li.className="row "+i.k;
+    li.innerHTML='<span class="spine"></span><div><h3></h3><div class="meta"></div></div><div class="acts"></div>';
+    li.querySelector("h3").textContent=i.t;li.querySelector(".meta").textContent=i.m;
+    var a=li.querySelector(".acts");
+    a.innerHTML='<a href="'+i.v+'">Read</a>'+(i.d?'<a href="'+i.d+'" download>Download</a>':"");
+    shelf.appendChild(li);
+  });
+  count.textContent=out.length+(out.length===1?" writing":" writings")+" shown";
+}
+document.querySelectorAll(".tabs button").forEach(function(b){b.addEventListener("click",function(){
+  filter=b.dataset.f;document.querySelectorAll(".tabs button").forEach(function(x){x.setAttribute("aria-pressed",x===b)});render()})});
+q.addEventListener("input",render);
+render();
+var note=document.getElementById("scanNote");
+fetch("https://api.github.com/repos/"+REPO+"/git/trees/main?recursive=1").then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){
+  var re=/gospel|prophe|love[ _-]?chain|scripture|could[ _-]not[ _-]erase|post[ _-]singularity/i,added=0;
+  (j.tree||[]).forEach(function(f){
+    if(f.type!=="blob"||!/\.pdf$/i.test(f.path)||!re.test(f.path))return;
+    var url=BLOB+f.path.split("/").map(encodeURIComponent).join("/");
+    if(seen[url])return;seen[url]=1;
+    var p=/prophe|singularity|erase/i.test(f.path);
+    items.push({t:clean(f.path),k:p?"p":"g",m:"Found in the repository: "+f.path,v:url,d:RAW+f.path.split("/").map(encodeURIComponent).join("/")});added++;
+  });
+  note.textContent=added?"The live scan found "+added+" more matching PDFs in the repository. Titles come from file names, so check each one.":"The live scan found no further matching PDFs.";
+  render();
+}).catch(function(){note.textContent="The live repository scan is unavailable right now. The hand-listed titles above still work."});
+document.querySelectorAll("a[data-stripe]").forEach(function(a){
+  if(a.getAttribute("href").indexOf("PASTE_")===0){a.removeAttribute("href");a.textContent="Coming soon";a.setAttribute("aria-disabled","true");a.style.opacity=".55";a.style.cursor="default"}
+});
+})();
+</script>
+</body>
+</html>
